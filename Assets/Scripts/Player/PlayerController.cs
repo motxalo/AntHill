@@ -41,12 +41,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Bomba(){
-		Vector3 nearest = transform.position + transform.forward;
-		Vector3 tpos = new Vector3(Mathf.RoundToInt(nearest.x), 0, Mathf.RoundToInt(nearest.z));
-		if(MapManager.GetTile(Mathf.RoundToInt(nearest.x), Mathf.RoundToInt(nearest.z)) == 0){
-			Instantiate(bomba, tpos, Quaternion.identity);
+		Vector3 nearest = transform.position;// + transform.forward;
+		Vector3 tpos = new Vector3(Mathf.FloorToInt(nearest.x), 0, Mathf.FloorToInt(nearest.z));
+		//if(MapManager.GetTile(Mathf.RoundToInt(nearest.x), Mathf.RoundToInt(nearest.z)) == 0){
+			Instantiate(bomba, tpos + new Vector3(.5f,0f,.5f), Quaternion.identity);
 			realBombfrec = 0f;
-		}
+		//}
 	}
 
 	void Die(){

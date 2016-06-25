@@ -32,6 +32,7 @@ public class LoadLevel : MonoBehaviour {
 				int x = int.Parse(""+tile.Attribute("posx").Value);
 				int y = int.Parse(""+tile.Attribute("posy").Value);
 				GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+				cube.transform.position += cube.transform.localScale/2f;
 				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
 				MapManager.SetTile(x,y,int.Parse(""+tile.Attribute("category").Value));
 				if(tile.Attribute("category").Value+"" == "1")
@@ -46,15 +47,19 @@ public class LoadLevel : MonoBehaviour {
 		// Debug para el borde
 		for(int i = 0; i<size;i++){
 			GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(0, 0, i), Quaternion.identity) as GameObject;
+			cube.transform.position+=cube.transform.localScale/2f;
 			cube.transform.parent = gameObject.transform;
 			cube.GetComponent<MeshRenderer> ().material = material;
 			cube = Instantiate(tilePrefab,tempPos + new Vector3(size-1, 0, i), Quaternion.identity) as GameObject;
+			cube.transform.position+=cube.transform.localScale/2f;
 			cube.transform.parent = gameObject.transform;
 			cube.GetComponent<MeshRenderer> ().material = material;
 			cube = Instantiate(tilePrefab,tempPos + new Vector3(i, 0, 0), Quaternion.identity) as GameObject;
+			cube.transform.position+=cube.transform.localScale/2f;
 			cube.transform.parent = gameObject.transform;
 			cube.GetComponent<MeshRenderer> ().material = material;
 			cube = Instantiate(tilePrefab,tempPos + new Vector3(i, 0, size-1), Quaternion.identity) as GameObject;
+			cube.transform.position+=cube.transform.localScale/2f;
 			cube.transform.parent = gameObject.transform;
 			cube.GetComponent<MeshRenderer> ().material = material;
 		}
