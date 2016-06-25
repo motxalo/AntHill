@@ -38,7 +38,12 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		MapManager.PlayerIn(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z), playerId);
+		if(panelDebug){
+			panelDebug.transform.position = new Vector3(Mathf.FloorToInt(transform.position.x) + .5f, .1f, Mathf.FloorToInt(transform.position.z) + .5f);
+		}
 	}
+
+	public GameObject panelDebug;
 
 	void Bomba(){
 		Vector3 nearest = transform.position;// + transform.forward;
