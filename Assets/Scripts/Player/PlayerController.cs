@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour {
 		//movement += transform.right 	* Input.GetAxis("Horizontal"+playerId)	* speed.y;
 		if(movement!= Vector3.zero){
 		//	Debug.Log("MOVEMENT : "+movement);
-			rb.MovePosition(transform.position + movement*Time.deltaTime);
+			rb.velocity = movement;
+			//rb.MovePosition(transform.position + movement*Time.deltaTime);
 		}
 
 		if (realBombfrec >= bombFrec && Input.GetButtonDown("Bomb"+playerId)){
