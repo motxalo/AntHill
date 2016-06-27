@@ -14,14 +14,16 @@ public class mouseMovement : MonoBehaviour {
 	void Update () {
 		RaycastHit hit;
 		Ray touchRay = new Ray (transform.position, Vector3.forward);
-		int rayDistance = 40;
+		int rayDistance = 100;
 		Debug.DrawRay (transform.position, Vector3.forward * rayDistance);
-		if(Physics.Raycast(touchRay,out hit, rayDistance)){
-			if (hit.transform.tag == "planosEditor") {
-				hit.transform.GetComponent<MeshRenderer> ().material = newMaterial;
+		if (Input.GetMouseButtonDown(0)) {
+			if (Physics.Raycast (touchRay, out hit, rayDistance)) {
+				if (hit.transform.tag == "planosEditor") {
+					hit.transform.GetComponent<MeshRenderer> ().material = newMaterial;
+				}
 			}
 		}
 		posMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		transform.position = new Vector3(posMouse.x,posMouse.y,0);
+		transform.position = new Vector3(posMouse.x,posMouse.y,transform.position.z);
 	}
 }
