@@ -1,0 +1,4 @@
+/Users/alfonsonavamorales/Unity/AntHill/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/alfonsonavamorales/Unity/AntHill/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/alfonsonavamorales/Unity/AntHill/obj/Debug/Assembly-CSharp.dll
+/Users/alfonsonavamorales/Unity/AntHill/obj/Debug/Assembly-CSharp.dll.mdb
