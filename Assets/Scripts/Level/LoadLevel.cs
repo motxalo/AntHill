@@ -22,7 +22,7 @@ public class LoadLevel : MonoBehaviour {
 
 		xmlSourceAsset = LevelXML;
 		// ESTO FUNCIONA SI TODO ESTA ESCALA 1.1
-		MapManager.InitPlayers(2);
+		MapManager.InitPlayers(4);
 		MapManager.Init(size,size);
 		if (xmlSourceAsset != null) {
 			xmlDoc = XDocument.Parse (xmlSourceAsset.text);

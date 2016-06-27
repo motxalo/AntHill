@@ -55,5 +55,33 @@ public class PlayerCamera : MonoBehaviour {
 			}
 			return;
 		}
+		if (playerAmount == 3){
+			if (playerId == 0){
+				cam.rect = new Rect(0f,0f,.5f,.5f);
+			}
+			if (playerId == 1){
+				cam.rect = new Rect(0.5f,0f,.5f,.5f);
+			}
+			if (playerId == 2){
+				cam.rect = new Rect(0.5f,0.5f,.5f,.5f);
+			}
+			return;
+		}
+		if (playerAmount == 4){
+			if (playerId == 0){
+				cam.rect = new Rect(0f,0f,.5f,.5f);
+			}
+			if (playerId == 1){
+				cam.rect = new Rect(0.5f,0f,.5f,.5f);
+			}
+			if (playerId == 2){
+				cam.rect = new Rect(0f,0.5f,.5f,.5f);
+			}
+			if (playerId == 3){
+				cam.rect = new Rect(0.5f,0.5f,.5f,.5f);
+			}
+			return;
+		}
+
 	}
 }

@@ -146,4 +146,6 @@
   <tile category="2" posx ="23" posy = "12" />
   <tile category="100" posx ="1" posy = "1" />
   <tile category="101" posx ="1" posy = "30" />
+  <tile category="102" posx ="30" posy = "30" />
+  <tile category="103" posx ="10" posy = "1" />
 </level>
