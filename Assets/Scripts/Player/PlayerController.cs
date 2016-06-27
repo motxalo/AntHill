@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		gameObject.name="Player"+playerId;
 		realBombfrec = 0f;
 		canMove = true;
 		rb = GetComponent<Rigidbody>();
@@ -58,6 +59,15 @@ public class PlayerController : MonoBehaviour {
 	void Die(){
 		Debug.Log(" DIE : "+gameObject.name);
 		canMove = false;
+		rb.isKinematic = true;
 		GetComponent<Renderer>().material.color = Color.black;
+	}
+
+
+	// CAMERA FUNCTIONS
+
+
+	void SetupCamera(){
+		
 	}
 }

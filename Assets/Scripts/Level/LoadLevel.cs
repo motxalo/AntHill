@@ -13,7 +13,7 @@ public class LoadLevel : MonoBehaviour {
 	public int size = 50;
 
 	// Use this for initialization
-	void Start () {
+	public void DoLoading () {
 		Vector3 tempPos = transform.position;
 
 		TextAsset xmlSourceAsset = null;
@@ -31,17 +31,22 @@ public class LoadLevel : MonoBehaviour {
 				//Debug.Log ("CREATED TILE : "+ tile.Attribute("posx").Value+","+tile.Attribute("posy").Value);
 				int x = int.Parse(""+tile.Attribute("posx").Value);
 				int y = int.Parse(""+tile.Attribute("posy").Value);
-				GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(x, 0, y), Quaternion.identity) as GameObject;
-				cube.transform.position += cube.transform.localScale/2f;
-				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
-				MapManager.SetTile(x,y,int.Parse(""+tile.Attribute("category").Value));
-				if(tile.Attribute("category").Value+"" == "1")
-					cube.GetComponent<MeshRenderer> ().material = material;
-				else
-					cube.GetComponent<MeshRenderer> ().material = breakable;
-				cube.transform.parent = gameObject.transform;
-				cube.name ="Tile"+x+"_"+y;
 
+				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
+				int value = int.Parse(""+tile.Attribute("category").Value);
+				MapManager.SetTile(x,y,value);
+				if (value >= 100){
+					MapManager.PlayerIn(x,y,value-100);
+				}else{
+					GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+					cube.transform.position += cube.transform.localScale/2f;
+					if(value == 1)
+						cube.GetComponent<MeshRenderer> ().material = material;
+					else
+						cube.GetComponent<MeshRenderer> ().material = breakable;
+					cube.transform.parent = gameObject.transform;
+					cube.name ="Tile"+x+"_"+y;
+				}
 			}
 		}
 		// Debug para el borde

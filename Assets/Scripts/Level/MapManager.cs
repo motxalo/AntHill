@@ -41,5 +41,9 @@ public static class MapManager  {
 			map[_x, _y] = 100 + _val;
 		}
 	}
+
+	public static Vector2 GetPlayerPos(int playerId){
+		return new Vector2(players[playerId,1],players[playerId,2]);
+	}
 		
 }
