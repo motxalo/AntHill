@@ -40,11 +40,19 @@ public class PlayerCamera : MonoBehaviour {
 		}
 	}
 
-	void SetPlayerMode(int playerAmount, SystemInfo playerId){
+	public void SetPlayerMode(int playerAmount, int playerId){
+		Camera cam = GetComponent<Camera>();
 		if (playerAmount == 1){
+			cam.rect = new Rect(0f,0f,1f,1f);
 			return;
 		}
 		if (playerAmount == 2){
+			if (playerId == 0){
+				cam.rect = new Rect(0f,0f,.5f,1f);
+			}
+			if (playerId == 1){
+				cam.rect = new Rect(0f,0.5f,.5f,1f);
+			}
 			return;
 		}
 	}

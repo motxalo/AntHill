@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 		realBombfrec = 0f;
 		canMove = true;
 		rb = GetComponent<Rigidbody>();
+		SetupCamera();
 	}
 	
 	// Update is called once per frame
@@ -68,6 +69,6 @@ public class PlayerController : MonoBehaviour {
 
 
 	void SetupCamera(){
-		
+		GetComponentInChildren<PlayerCamera>().SetPlayerMode(PlayerPrefs.GetInt("Players"),playerId);
 	}
 }
