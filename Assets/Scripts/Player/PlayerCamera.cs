@@ -12,7 +12,7 @@ public class PlayerCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		ChangeCameraMode(CameraMode.perspective);
 	}
 	
 	// Update is called once per frame
@@ -30,12 +30,12 @@ public class PlayerCamera : MonoBehaviour {
 		case CameraMode.orthographic:
 			GetComponent<Camera>().orthographic = true;
 			transform.localPosition = new Vector3(0f,9f,.0f);
-			transform.rotation = Quaternion.Euler(new Vector3(90f,0f,0f));
+			transform.localRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
 			break;
 		case CameraMode.perspective:
 			GetComponent<Camera>().orthographic = false;
 			transform.localPosition = new Vector3(0f,9f,-7.7f);
-			transform.LookAt (transform.parent);
+			transform.localRotation = Quaternion.Euler(new Vector3(65f,0f,0f));
 			break;
 		}
 	}
@@ -51,7 +51,7 @@ public class PlayerCamera : MonoBehaviour {
 				cam.rect = new Rect(0f,0f,.5f,1f);
 			}
 			if (playerId == 1){
-				cam.rect = new Rect(0f,0.5f,.5f,1f);
+				cam.rect = new Rect(0.5f,0f,.5f,1f);
 			}
 			return;
 		}
