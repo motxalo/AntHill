@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!canMove) return;
+		if (!canMove || Time.timeScale == 0f) return;
 		realBombfrec += Time.deltaTime;
 		Vector3 movement = Vector3.zero;
 		movement += transform.forward 	* Input.GetAxis("Vertical"+playerId) 	* speed.x;
