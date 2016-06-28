@@ -3,11 +3,14 @@ using System.Collections;
 
 public class Bomb : MonoBehaviour {
 
+	public Vector2 cell;
 	public float speed = 3f;
 	public int alcance = 3;
 	public GameObject effect;
 	// Use this for initialization
 	void Start () {
+		cell = new Vector2(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
+		//MapManager.SetBomb(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z),gameObject);
 		Invoke("Explode",speed);
 	}
 	
@@ -16,7 +19,7 @@ public class Bomb : MonoBehaviour {
 		GetComponent<Renderer>().material.color = Color.Lerp(GetComponent<Renderer>().material.color,Color.red, Time.deltaTime / speed);
 	}
 
-	void Explode(){
+	public void Explode(){
 		for(int i=1; i<= alcance; i++){
 			if(CanExplode (transform.position + new Vector3(1,0,0)*i))
 				Instantiate(effect, transform.position + new Vector3(1,0,0)*i, transform.rotation);
@@ -41,6 +44,7 @@ public class Bomb : MonoBehaviour {
 			else 
 				break;
 		}
+		//MapManager.ExplodeBomb(cell.x, cell.y, false);
 		if(CanExplode(transform.position))
 			Instantiate(effect, transform.position, transform.rotation);
 		Destroy (gameObject);
@@ -56,13 +60,24 @@ public class Bomb : MonoBehaviour {
 			if(CanExplode(transform.position + new Vector3(0,0,-1)*i))
 				Instantiate(effect, transform.position + new Vector3(0,0,-1)*i, transform.rotation);
 		}
+
 		Instantiate(effect, transform.position, transform.rotation);
 
 		Destroy (gameObject);
 	}
 
+	void DelayedExplode(){
+		Debug.Log("CHAINED EXPLOSION : "+gameObject.name);
+		CancelInvoke("Explode");
+		Invoke("Explode",.1f);
+	}
+
 	bool CanExplode (Vector3 pos){
 		int tile = MapManager.GetTile(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z));
+		//MapManager.ExplodeBomb(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z), true);
+		foreach (Bomb _b in FindObjectsOfType<Bomb>())
+			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y)
+				_b.DelayedExplode();
 		if(tile >= 100 ){
 			GameObject.Find("Player"+(tile-100)).SendMessage("Die");
 			tile = 0;

@@ -1,0 +1,21 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Weapons/Bomb.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Level/LoadLevel.cs" Line="25" Column="27" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="54" Column="91" />
+      <File FileName="Assets/Scripts/Weapons/Bomb.cs" Line="56" Column="88" />
+      <File FileName="Assets/Levels/XML/level1.xml" Line="150" Column="44" />
+      <File FileName="Assets/Scripts/Game/GameManager.cs" Line="33" Column="27" />
+      <File FileName="Assets/Scripts/Level/MapManager.cs" Line="59" Column="42" />
+      <File FileName="Assets/Scripts/Player/PlayerCamera.cs" Line="78" Column="26" />
+      <File FileName="Assets/Scripts/Menus/GameModeMenu.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/Level/mouseMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menus/InGameMenu.cs" Line="12" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

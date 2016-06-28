@@ -4,13 +4,17 @@ using System.Collections;
 public static class MapManager  {
 
 	static int[,] map;
+	//static GameObject[,] objects;
 	static int[,] players;
 
 	public static void Init(int xlength, int ylength){
 		map = new int[xlength,ylength];
+		//objects = new GameObject[xlength,ylength];
 		for (int i=0; i<xlength;i++)
-			for (int k=0; k<ylength;k++)
+			for (int k=0; k<ylength;k++){
 				map[i,k] = 0;
+				//objects[i,k] = null;
+			}
 	}
 
 	public static void SetTile(int _x, int _y, int _val){
@@ -45,5 +49,20 @@ public static class MapManager  {
 	public static Vector2 GetPlayerPos(int playerId){
 		return new Vector2(players[playerId,1],players[playerId,2]);
 	}
-		
+
+	/*
+	public static void SetBomb(int _x, int _y, GameObject _bomb){
+		objects[_x,_y] = _bomb;
+	}
+
+	public static void ExplodeBomb(int _x, int _y, bool effect){
+		if(_x <0 || _y<0) return;
+		Debug.Log("BOMB EXPLOSION IN "+_x+","+_y+"  " +objects[_x,_y]);
+		//return;
+		if (objects[_x,_y] != null){
+			if ( effect ) objects[_x,_y].GetComponent<Bomb>().Explode();//.SendMessage("Explode",SendMessageOptions.DontRequireReceiver);
+			objects[_x,_y] = null;
+		}	
+	}*/
+
 }
