@@ -58,10 +58,14 @@
      <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
      <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
+     <Compile Include="Assets\Scripts\Menus\LevelSelectMenu.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
-     <None Include="Assets\Levels\XML\level1.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba3.xml" />
+     <None Include="Assets\Levels\XML\levelManager.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba2.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

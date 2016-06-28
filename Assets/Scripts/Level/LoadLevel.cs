@@ -6,7 +6,6 @@ using System.Xml.Linq;
 public class LoadLevel : MonoBehaviour {
 
 	public GameObject tilePrefab;
-	public TextAsset LevelXML;
 	public Material material;
 	public Material breakable;
 
@@ -20,7 +19,7 @@ public class LoadLevel : MonoBehaviour {
 
 		XDocument xmlDoc = null;
 
-		xmlSourceAsset = LevelXML;
+		xmlSourceAsset = Resources.Load("Maps/"+PlayerPrefs.GetString("MAPNAME")) as TextAsset;
 		// ESTO FUNCIONA SI TODO ESTA ESCALA 1.1
 		MapManager.InitPlayers(4);
 		MapManager.Init(size,size);
