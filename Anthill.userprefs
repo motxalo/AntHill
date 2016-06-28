@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs">
     <Files>
       <File FileName="../AntHill/Assets/Scripts/LevelEditor/mouseMovement.cs" Line="1" Column="1" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="20" Column="63" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="1" Column="1" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorCamera.cs" Line="19" Column="13" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="1" Column="1" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="42" Column="42" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorCamera.cs" Line="1" Column="1" />
       <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
