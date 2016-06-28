@@ -12,7 +12,6 @@ public class mouseMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(selectedTileId < 0) return;
 		RaycastHit hit;
 		Ray touchRay = new Ray (transform.position, Vector3.forward);
 		int rayDistance = 20;
@@ -20,8 +19,11 @@ public class mouseMovement : MonoBehaviour {
 		if (Input.GetMouseButton(0)) {
 			if (Physics.Raycast (touchRay, out hit, rayDistance)) {
 				if (hit.transform.tag == "planosEditor") {
+					if(selectedTileId < 0) return;
 					//hit.transform.GetComponent<MeshRenderer> ().material = newMaterial;
 					hit.transform.GetComponent<MeshRenderer> ().material.SetTexture("_MainTex", selectedTileTexture);
+				}else if(hit.transform.tag == "botonEditor"){
+					hit.transform.GetComponent<LevelEditorButton>().DoClicked();
 				}
 			}
 		}
@@ -29,12 +31,14 @@ public class mouseMovement : MonoBehaviour {
 		transform.position = new Vector3(posMouse.x,posMouse.y,transform.position.z);
 	}
 
-	private Texture selectedTileTexture;
-	private int 	   selectedTileId = -1;
+	private Texture 	selectedTileTexture;
+	private int 	   	selectedTileId = -1;
+	public  Renderer    debugTile;
 
 	public void SetSelectedTile(int _id, Texture _tex){
 		selectedTileId = _id;
 		selectedTileTexture = _tex;
+		debugTile.material.SetTexture("_MainTex",selectedTileTexture);
 	}
 
 	/*

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\Level\MapManager.cs" />
      <Compile Include="Assets\Scripts\Level\Tile.cs" />
+     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorButton.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorCamera.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorGenerator.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
