@@ -16,12 +16,14 @@ public class mouseMovement : MonoBehaviour {
 		Ray touchRay = new Ray (transform.position, Vector3.forward);
 		int rayDistance = 20;
 		Debug.DrawRay (transform.position, Vector3.forward * rayDistance);
-		if (Input.GetMouseButton(0)) {
+		if (Input.GetMouseButtonDown(0)) {
 			if (Physics.Raycast (touchRay, out hit, rayDistance)) {
 				if (hit.transform.tag == "planosEditor") {
 					if(selectedTileId < 0) return;
-					//hit.transform.GetComponent<MeshRenderer> ().material = newMaterial;
 					hit.transform.GetComponent<MeshRenderer> ().material.SetTexture("_MainTex", selectedTileTexture);
+					// RELLENO LA LISTA DE TILES
+					string[] cellname = hit.transform.name.Split('_');
+					LevelEditorManager.SetTile(int.Parse(cellname[1]),int.Parse(cellname[2]),selectedTileId);
 				}else if(hit.transform.tag == "botonEditor"){
 					hit.transform.GetComponent<LevelEditorButton>().DoClicked();
 				}

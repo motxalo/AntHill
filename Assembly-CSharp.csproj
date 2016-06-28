@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorButton.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorCamera.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorGenerator.cs" />
+     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorManager.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
      <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
