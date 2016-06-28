@@ -6,9 +6,11 @@ public static class MapManager  {
 	static int[,] map;
 	//static GameObject[,] objects;
 	static int[,] players;
-
+	static Vector2 bounds = Vector2.zero;
 	public static void Init(int xlength, int ylength){
 		map = new int[xlength,ylength];
+		bounds.x = xlength;
+		bounds.y = ylength;
 		//objects = new GameObject[xlength,ylength];
 		for (int i=0; i<xlength;i++)
 			for (int k=0; k<ylength;k++){
@@ -22,7 +24,7 @@ public static class MapManager  {
 	}
 
 	public static int GetTile(int _x, int _y){
-		if(_x < 0 || _y < 0)
+		if(_x < 0 || _y < 0 || _x >= bounds.x || _y >= bounds.y )
 			return -1;
 		return map[_x,_y] ;
 	}
@@ -37,7 +39,7 @@ public static class MapManager  {
 	}
 
 	public static void PlayerIn(int _x, int _y, int _val){
-		if(_x <0 || _y<0) return;
+		if(_x < 0 || _y < 0 || _x >= bounds.x || _y >= bounds.y ) return;
 		if(players[_val, 1 ] != _x || players[_val,2] != _y){
 			map[players[_val, 1], players[_val, 2]] = 0;
 			players[_val,1] = _x;

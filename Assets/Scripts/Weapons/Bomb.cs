@@ -10,7 +10,6 @@ public class Bomb : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cell = new Vector2(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
-		//MapManager.SetBomb(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z),gameObject);
 		Invoke("Explode",speed);
 	}
 	
@@ -44,7 +43,6 @@ public class Bomb : MonoBehaviour {
 			else 
 				break;
 		}
-		//MapManager.ExplodeBomb(cell.x, cell.y, false);
 		if(CanExplode(transform.position))
 			Instantiate(effect, transform.position, transform.rotation);
 		Destroy (gameObject);
@@ -74,7 +72,6 @@ public class Bomb : MonoBehaviour {
 
 	bool CanExplode (Vector3 pos){
 		int tile = MapManager.GetTile(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z));
-		//MapManager.ExplodeBomb(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z), true);
 		foreach (Bomb _b in FindObjectsOfType<Bomb>())
 			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y)
 				_b.DelayedExplode();
