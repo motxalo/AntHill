@@ -18,8 +18,8 @@ public class LoadLevel : MonoBehaviour {
 		TextAsset xmlSourceAsset = null;
 
 		XDocument xmlDoc = null;
-
-		xmlSourceAsset = Resources.Load("Maps/"+PlayerPrefs.GetString("MAPNAME")) as TextAsset;
+		Debug.Log("CARGANDO MAPA : "+"Maps/"+PlayerPrefs.GetString("MAPNAME")+"/mapa");
+		xmlSourceAsset = Resources.Load("Maps/"+PlayerPrefs.GetString("MAPNAME")+"/mapa") as TextAsset;
 		// ESTO FUNCIONA SI TODO ESTA ESCALA 1.1
 		MapManager.InitPlayers(4);
 		MapManager.Init(size,size);

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{66316CDE-7549-16D4-FDC7-95A3B1407DA7}</ProjectGuid>
+    <ProjectGuid>{10627872-AC00-C4F9-6D0B-DEA0E9B82448}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,10 +62,10 @@
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
-     <None Include="Assets\Resources\Maps\mapaPrueba3.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba3\mapa.xml" />
      <None Include="Assets\Levels\XML\levelManager.xml" />
-     <None Include="Assets\Resources\Maps\mapaPrueba2.xml" />
-     <None Include="Assets\Resources\Maps\mapaPrueba.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba2\mapa.xml" />
+     <None Include="Assets\Resources\Maps\mapaPrueba\mapa.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
