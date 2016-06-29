@@ -38,8 +38,8 @@ public static class LevelEditorManager  {
 			for (int k = 0; k < 50; k++) {
 				XmlElement element2 = docMap.CreateElement (string.Empty, "tile", string.Empty);
 				element1.AppendChild (element2);
-				if(map[i,k])>200
-					element2.SetAttribute ("category", ""0);
+				if(map[i,k]>200)
+					element2.SetAttribute ("category", "0");
 				else
 					element2.SetAttribute ("category", ""+map[i,k]);
 				element2.SetAttribute ("posx", ""+i);
@@ -55,27 +55,27 @@ public static class LevelEditorManager  {
 		XmlDocument itemMap = new XmlDocument( );
 
 		//(1) the xml declaration is recommended, but not mandatory
-		XmlDeclaration xmlDeclaration = itemMap.CreateXmlDeclaration( "1.0", "UTF-8", null );
-		XmlElement root = itemMap.DocumentElement;
+		xmlDeclaration = itemMap.CreateXmlDeclaration( "1.0", "UTF-8", null );
+		root = itemMap.DocumentElement;
 		itemMap.InsertBefore( xmlDeclaration, root );
 
 		//(2) string.Empty makes cleaner code
-		XmlElement element1 = itemMap.CreateElement( string.Empty, "level", string.Empty );
+		element1 = itemMap.CreateElement( string.Empty, "level", string.Empty );
 		itemMap.AppendChild( element1 );
 
 		for (int i = 0; i < 50; i++)
 			for (int k = 0; k < 50; k++) {
 				XmlElement element2 = itemMap.CreateElement (string.Empty, "tile", string.Empty);
 				element1.AppendChild (element2);
-				if(map[i,k])<200
-					element2.SetAttribute ("category", ""0);
+				if(map[i,k]<200)
+					element2.SetAttribute ("category", "0");
 				else
 					element2.SetAttribute ("category", ""+map[i,k]);
 				element2.SetAttribute ("posx", ""+i);
 				element2.SetAttribute ("posy", ""+k);
 			}
 
-		itemMap.Save( "item.xml" );
+		itemMap.Save( "objetos.xml" );
 		//docMap.Save( Application.dataPath + "map.xml" );
 	}
 
