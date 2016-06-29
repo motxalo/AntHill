@@ -66,8 +66,10 @@
      <None Include="Assets\Resources\Maps\mapaPrueba3\objetos.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba3\mapa.xml" />
      <None Include="Assets\Levels\XML\levelManager.xml" />
+     <None Include="Assets\Resources\Maps\football\objetos.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba2\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba\objetos.xml" />
+     <None Include="Assets\Resources\Maps\football\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba2\objetos.xml" />
  <Reference Include="UnityEngine.UI">

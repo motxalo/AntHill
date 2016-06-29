@@ -35,17 +35,20 @@ public class LoadLevel : MonoBehaviour {
 				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
 				int value = int.Parse(""+tile.Attribute("category").Value);
 				MapManager.SetTile(x,y,value);
-				if (value >= 100){
-					MapManager.PlayerIn(x,y,value-100);
-				}else{
-					GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(x, 0, y), Quaternion.identity) as GameObject;
-					cube.transform.position += cube.transform.localScale/2f;
-					if(value == 1)
-						cube.GetComponent<MeshRenderer> ().material = material;
-					else
-						cube.GetComponent<MeshRenderer> ().material = breakable;
-					cube.transform.parent = gameObject.transform;
-					cube.name ="Tile"+x+"_"+y;
+				if(value != 0){
+					if (value >= 100){
+						MapManager.PlayerIn(x,y,value-100);
+					}else{
+						
+						GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+						cube.transform.position += cube.transform.localScale/2f;
+						if(value == 1)
+							cube.GetComponent<MeshRenderer> ().material = material;
+						else
+							cube.GetComponent<MeshRenderer> ().material = breakable;
+						cube.transform.parent = gameObject.transform;
+						cube.name ="Tile"+x+"_"+y;
+					}
 				}
 			}
 		}

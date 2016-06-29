@@ -46,7 +46,7 @@ public static class LevelEditorManager  {
 				element2.SetAttribute ("posy", ""+k);
 			}
 
-		docMap.Save( "map.xml" );
+		docMap.Save( "mapa.xml" );
 		//docMap.Save( Application.dataPath + "map.xml" );
 		
 		/************************************************/
