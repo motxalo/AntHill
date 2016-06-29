@@ -85,4 +85,8 @@ public class Bomb : MonoBehaviour {
 		}
 		return ( tile == 0);
 	}
+
+	public void PlayerExit(){
+		GetComponent<BoxCollider>().isTrigger = false;
+	}
 }

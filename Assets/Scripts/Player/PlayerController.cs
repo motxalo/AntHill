@@ -70,4 +70,14 @@ public class PlayerController : MonoBehaviour {
 	void SetupCamera(){
 		GetComponentInChildren<PlayerCamera>().SetPlayerMode(PlayerPrefs.GetInt("Players"),playerId);
 	}
+
+	// TRIGGER FUNCTIONS
+
+	void OnTriggerEnter(Collider other){
+		
+	}
+
+	void OnTriggerExit(Collider other) {
+		other.gameObject.SendMessage("PlayerExit", SendMessageOptions.DontRequireReceiver);
+	}
 }
