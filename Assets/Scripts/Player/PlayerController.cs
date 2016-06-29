@@ -74,7 +74,8 @@ public class PlayerController : MonoBehaviour {
 	// TRIGGER FUNCTIONS
 
 	void OnTriggerEnter(Collider other){
-		
+		if(other.tag == "object")
+			other.gameObject.SendMessage("PlayerEnter", SendMessageOptions.DontRequireReceiver);
 	}
 
 	void OnTriggerExit(Collider other) {
