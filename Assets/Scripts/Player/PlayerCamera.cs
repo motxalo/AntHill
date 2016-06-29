@@ -19,9 +19,9 @@ public class PlayerCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// DEBUG
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-			ChangeCameraMode(CameraMode.orthographic);
 		if (Input.GetKeyDown(KeyCode.Alpha2))
+			ChangeCameraMode(CameraMode.orthographic);
+		if (Input.GetKeyDown(KeyCode.Alpha1))
 			ChangeCameraMode(CameraMode.perspective);
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 			ChangeCameraMode(CameraMode.firstPreson);
