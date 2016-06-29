@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+  <tile category="200" posx ="10" posy = "20" />
+  <tile category="200" posx ="10" posy = "21" />
+  <tile category="200" posx ="10" posy = "22" />
+  <tile category="200" posx ="10" posy = "23" />
+  <tile category="200" posx ="10" posy = "24" />
+</level>

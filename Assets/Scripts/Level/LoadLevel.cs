@@ -6,6 +6,7 @@ using System.Xml.Linq;
 public class LoadLevel : MonoBehaviour {
 
 	public GameObject tilePrefab;
+	public GameObject[] objectsPrefab;
 	public Material material;
 	public Material breakable;
 
@@ -45,6 +46,27 @@ public class LoadLevel : MonoBehaviour {
 						cube.GetComponent<MeshRenderer> ().material = breakable;
 					cube.transform.parent = gameObject.transform;
 					cube.name ="Tile"+x+"_"+y;
+				}
+			}
+		}
+		// CArgo los objetos
+		//Debug.Log("CARGANDO OBJETOS : "+"Maps/"+PlayerPrefs.GetString("MAPNAME")+"/objetos");
+		xmlSourceAsset = Resources.Load("Maps/"+PlayerPrefs.GetString("MAPNAME")+"/objetos") as TextAsset;
+		if (xmlSourceAsset != null) {
+			xmlDoc = XDocument.Parse (xmlSourceAsset.text);
+			foreach(XElement tile in xmlDoc.Descendants("tile"))
+			{
+				//Debug.Log ("CREATED TILE : "+ tile.Attribute("posx").Value+","+tile.Attribute("posy").Value);
+				int x = int.Parse(""+tile.Attribute("posx").Value);
+				int y = int.Parse(""+tile.Attribute("posy").Value);
+
+				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
+				int value = int.Parse(""+tile.Attribute("category").Value);
+				if (value>= 200){
+					GameObject cube = Instantiate(objectsPrefab[value-200],tempPos + new Vector3(x, 0, y), Quaternion.Euler(new Vector3(90f,0f,0f))) as GameObject;
+					cube.transform.position += new Vector3(.5f,.5f,.5f);
+					cube.transform.parent = gameObject.transform;
+					cube.name ="Object"+x+"_"+y;
 				}
 			}
 		}
