@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject[] players;
 	public GameObject[] canvases;
-
+	public GameObject cameraFixed; // Esta camara solo se mantendrá activa en caso de q el juego sea a 3 jugadore sy quede un cuadro libre
 	// Use this for initialization
 	void Start () {
 		StartGame();
@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
 	}
 
 	void StartGame(){
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find("Map").GetComponent<LoadLevel>().DoLoading();
 		// CARGAR PLAYER
 		int playersAmount = PlayerPrefs.GetInt("Players");
+		cameraFixed.SetActive(playersAmount==3);
 		Debug.Log("INIT GAME "+playersAmount+" PLAYERS");
 		for (int i = 0; i<playersAmount; i++){
 			GameObject player = GameObject.Instantiate(players[i] as GameObject) ;
