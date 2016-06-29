@@ -21,39 +21,62 @@ public static class LevelEditorManager  {
 	}
 
 	public static void SaveToXML(){
-		XmlDocument doc = new XmlDocument( );
+		
+		//salvar mapa		
+		XmlDocument docMap = new XmlDocument( );
 
 		//(1) the xml declaration is recommended, but not mandatory
-		XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration( "1.0", "UTF-8", null );
-		XmlElement root = doc.DocumentElement;
-		doc.InsertBefore( xmlDeclaration, root );
+		XmlDeclaration xmlDeclaration = docMap.CreateXmlDeclaration( "1.0", "UTF-8", null );
+		XmlElement root = docMap.DocumentElement;
+		docMap.InsertBefore( xmlDeclaration, root );
 
 		//(2) string.Empty makes cleaner code
-		XmlElement element1 = doc.CreateElement( string.Empty, "level", string.Empty );
-		doc.AppendChild( element1 );
+		XmlElement element1 = docMap.CreateElement( string.Empty, "level", string.Empty );
+		docMap.AppendChild( element1 );
 
 		for (int i = 0; i < 50; i++)
 			for (int k = 0; k < 50; k++) {
-				XmlElement element2 = doc.CreateElement (string.Empty, "tile", string.Empty);
+				XmlElement element2 = docMap.CreateElement (string.Empty, "tile", string.Empty);
 				element1.AppendChild (element2);
-
-				element2.SetAttribute ("category", ""+map[i,k]);
+				if(map[i,k])>200
+					element2.SetAttribute ("category", ""0);
+				else
+					element2.SetAttribute ("category", ""+map[i,k]);
 				element2.SetAttribute ("posx", ""+i);
 				element2.SetAttribute ("posy", ""+k);
 			}
-		/*
-		XmlElement element3 = doc.CreateElement( string.Empty, "level2", string.Empty );
-		XmlText text1 = doc.CreateTextNode( "text" );
-		element3.AppendChild( text1 );
-		element2.AppendChild( element3 );
 
-		XmlElement element4 = doc.CreateElement( string.Empty, "level2", string.Empty );
-		XmlText text2 = doc.CreateTextNode( "other text" );
-		element4.AppendChild( text2 );
-		element2.AppendChild( element4 );
-		*/
-		doc.Save( "doc.xml" );
-		//doc.Save( Application.dataPath + "doc.xml" );
+		docMap.Save( "map.xml" );
+		//docMap.Save( Application.dataPath + "map.xml" );
+		
+		/************************************************/
+		
+		//salvar items		
+		XmlDocument itemMap = new XmlDocument( );
+
+		//(1) the xml declaration is recommended, but not mandatory
+		XmlDeclaration xmlDeclaration = itemMap.CreateXmlDeclaration( "1.0", "UTF-8", null );
+		XmlElement root = itemMap.DocumentElement;
+		itemMap.InsertBefore( xmlDeclaration, root );
+
+		//(2) string.Empty makes cleaner code
+		XmlElement element1 = itemMap.CreateElement( string.Empty, "level", string.Empty );
+		itemMap.AppendChild( element1 );
+
+		for (int i = 0; i < 50; i++)
+			for (int k = 0; k < 50; k++) {
+				XmlElement element2 = itemMap.CreateElement (string.Empty, "tile", string.Empty);
+				element1.AppendChild (element2);
+				if(map[i,k])<200
+					element2.SetAttribute ("category", ""0);
+				else
+					element2.SetAttribute ("category", ""+map[i,k]);
+				element2.SetAttribute ("posx", ""+i);
+				element2.SetAttribute ("posy", ""+k);
+			}
+
+		itemMap.Save( "item.xml" );
+		//docMap.Save( Application.dataPath + "map.xml" );
 	}
 
 }
