@@ -2,12 +2,26 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs">
     <Files>
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="32" Column="7" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="12" Column="10" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="21" Column="36" />
       <File FileName="../AntHill/Assets/Scripts/LevelEditor/mouseMovement.cs" Line="1" Column="1" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="1" Column="1" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="42" Column="42" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorCamera.cs" Line="1" Column="1" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Anthill" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="LevelEditor" expanded="True">
+                  <Node name="LevelEditorManager.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

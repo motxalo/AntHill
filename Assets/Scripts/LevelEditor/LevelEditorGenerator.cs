@@ -9,6 +9,7 @@ public class LevelEditorGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("creando los planos");
 		CreateEditorPlane();
 		Camera.main.GetComponent<LevelEditorCamera>().SetupBounds (canvasSize);
 		LevelEditorManager.Init(Mathf.FloorToInt(canvasSize.x),Mathf.FloorToInt(canvasSize.y));

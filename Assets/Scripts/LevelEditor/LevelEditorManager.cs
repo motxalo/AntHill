@@ -8,11 +8,32 @@ public static class LevelEditorManager  {
 	static int[,] map;
 
 	public static void Init(int xlength, int ylength){
-		map = new int[xlength,ylength];
-		for (int i=0; i<xlength;i++)
-			for (int k=0; k<ylength;k++){
-				map[i,k] = 0;
+		TextAsset xmlSourceAsset = null;
+		XDocument xmlDoc = null;
+		Debug.Log("CARGANDO MAPA : /EditorMaps/mapa" );
+		xmlSourceAsset = Resources.Load("EditorMaps/mapa") as TextAsset;
+
+		if (xmlSourceAsset != null) {
+			map = new int[xlength,ylength];
+			for (int i=0; i<xlength;i++)
+				for (int k=0; k<ylength;k++){
+					map[i,k] = 0;
+				}
+			
+			xmlDoc = XDocument.Parse (xmlSourceAsset.text);
+			foreach (XElement tile in xmlDoc.Descendants("tile")) {
+				int x = int.Parse ("" + tile.Attribute ("posx").Value);
+				int y = int.Parse ("" + tile.Attribute ("posy").Value);
+				int value = int.Parse ("" + tile.Attribute ("category").Value);
+				/*Debug.Log (x);
+				Debug.Log (y);
+				Debug.Log (value);*/
+				SetTile (x, y, value);
+				//map[x,y] = value;
 			}
+		}
+		Debug.Log (map);
+
 	}
 
 	public static void SetTile(int _x, int _y, int _val){
@@ -38,7 +59,7 @@ public static class LevelEditorManager  {
 			for (int k = 0; k < 50; k++) {
 				XmlElement element2 = docMap.CreateElement (string.Empty, "tile", string.Empty);
 				element1.AppendChild (element2);
-				if(map[i,k]>200)
+				if(map[i,k]>=200)
 					element2.SetAttribute ("category", "0");
 				else
 					element2.SetAttribute ("category", ""+map[i,k]);
@@ -46,7 +67,9 @@ public static class LevelEditorManager  {
 				element2.SetAttribute ("posy", ""+k);
 			}
 
-		docMap.Save( "mapa.xml" );
+		docMap.Save (Application.dataPath + "/Resources/EditorMaps/mapa.xml");
+		Debug.Log ("mapa salvado");
+
 		//docMap.Save( Application.dataPath + "map.xml" );
 		
 		/************************************************/
@@ -75,7 +98,8 @@ public static class LevelEditorManager  {
 				element2.SetAttribute ("posy", ""+k);
 			}
 
-		itemMap.Save( "objetos.xml" );
+		itemMap.Save (Application.dataPath + "/Resources/EditorMaps/objetos.xml");
+		Debug.Log ("items salvados");
 		//docMap.Save( Application.dataPath + "map.xml" );
 	}
 
