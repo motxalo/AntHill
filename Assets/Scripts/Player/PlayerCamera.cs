@@ -5,7 +5,8 @@ public class PlayerCamera : MonoBehaviour {
 
 	public enum CameraMode{
 		perspective,
-		orthographic
+		orthographic,
+		firstPreson,
 	}
 
 	public CameraMode cameraMode = CameraMode.perspective;
@@ -22,6 +23,8 @@ public class PlayerCamera : MonoBehaviour {
 			ChangeCameraMode(CameraMode.orthographic);
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 			ChangeCameraMode(CameraMode.perspective);
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+			ChangeCameraMode(CameraMode.firstPreson);
 	}
 
 	public void ChangeCameraMode(CameraMode newCamMode){
@@ -29,13 +32,21 @@ public class PlayerCamera : MonoBehaviour {
 		switch (newCamMode){
 		case CameraMode.orthographic:
 			GetComponent<Camera>().orthographic = true;
+			GetComponent<Camera>().nearClipPlane = .3f;
 			transform.localPosition = new Vector3(0f,9f,.0f);
 			transform.localRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
 			break;
 		case CameraMode.perspective:
 			GetComponent<Camera>().orthographic = false;
+			GetComponent<Camera>().nearClipPlane = .3f;
 			transform.localPosition = new Vector3(0f,9f,-7.7f);
 			transform.localRotation = Quaternion.Euler(new Vector3(65f,0f,0f));
+			break;
+		case CameraMode.firstPreson:
+			GetComponent<Camera>().orthographic = false;
+			GetComponent<Camera>().nearClipPlane = 0.1f;
+			transform.localPosition = Vector3.zero;
+			transform.localRotation = Quaternion.Euler(Vector3.zero);
 			break;
 		}
 	}
