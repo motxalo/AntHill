@@ -254,7 +254,7 @@
   <tile category="0" posx="5" posy="1" />
   <tile category="0" posx="5" posy="2" />
   <tile category="0" posx="5" posy="3" />
-  <tile category="0" posx="5" posy="4" />
+  <tile category="200" posx="5" posy="4" />
   <tile category="0" posx="5" posy="5" />
   <tile category="0" posx="5" posy="6" />
   <tile category="0" posx="5" posy="7" />
@@ -304,7 +304,7 @@
   <tile category="0" posx="6" posy="1" />
   <tile category="0" posx="6" posy="2" />
   <tile category="0" posx="6" posy="3" />
-  <tile category="0" posx="6" posy="4" />
+  <tile category="200" posx="6" posy="4" />
   <tile category="0" posx="6" posy="5" />
   <tile category="0" posx="6" posy="6" />
   <tile category="0" posx="6" posy="7" />
@@ -354,7 +354,7 @@
   <tile category="0" posx="7" posy="1" />
   <tile category="0" posx="7" posy="2" />
   <tile category="0" posx="7" posy="3" />
-  <tile category="0" posx="7" posy="4" />
+  <tile category="200" posx="7" posy="4" />
   <tile category="0" posx="7" posy="5" />
   <tile category="0" posx="7" posy="6" />
   <tile category="0" posx="7" posy="7" />

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Linq;
 
 public static class LevelEditorManager  {
 
 	static int[,] map;
+
+	static Dictionary<int,Texture> textureSet;
 
 	public static void Init(int xlength, int ylength){
 		TextAsset xmlSourceAsset = null;
@@ -25,20 +28,48 @@ public static class LevelEditorManager  {
 				int x = int.Parse ("" + tile.Attribute ("posx").Value);
 				int y = int.Parse ("" + tile.Attribute ("posy").Value);
 				int value = int.Parse ("" + tile.Attribute ("category").Value);
-				/*Debug.Log (x);
-				Debug.Log (y);
-				Debug.Log (value);*/
 				SetTile (x, y, value);
-				//map[x,y] = value;
+			}
+		}
+
+		Debug.Log("CARGANDO OBJETOS : /EditorMaps/objetos" );
+		xmlSourceAsset = Resources.Load("EditorMaps/objetos") as TextAsset;
+
+		if (xmlSourceAsset != null) {
+
+			xmlDoc = XDocument.Parse (xmlSourceAsset.text);
+			foreach (XElement tile in xmlDoc.Descendants("tile")) {
+
+				int value = int.Parse ("" + tile.Attribute ("category").Value);
+				if(value != 0){
+					int x = int.Parse ("" + tile.Attribute ("posx").Value);
+					int y = int.Parse ("" + tile.Attribute ("posy").Value);
+					SetTile (x, y, value);
+				}
 			}
 		}
 		Debug.Log (map);
-
 	}
 
 	public static void SetTile(int _x, int _y, int _val){
-		Debug.Log("TILE SET : "+_x+","+_y+" WITH VAL : "+_val);
+//		Debug.Log("TILE SET : "+_x+","+_y+" WITH VAL : "+_val);
 		map[_x,_y] = _val;
+	}
+
+	public static int GetTile(int _x, int _y){
+		//		Debug.Log("TILE SET : "+_x+","+_y+" WITH VAL : "+_val);
+		return map[_x,_y];
+	}
+
+	// DICTIONARY SETS
+
+	public static void AddTexture(int _id, Texture _tex){
+		if(textureSet == null) textureSet = new Dictionary<int, Texture>();
+		textureSet.Add(_id,_tex);
+	}
+
+	public static Texture GetTexture(int _id){
+		return textureSet[_id];
 	}
 
 	public static void SaveToXML(){
