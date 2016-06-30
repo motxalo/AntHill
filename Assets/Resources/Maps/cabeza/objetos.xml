@@ -143,11 +143,11 @@
   <tile category="0" posx="2" posy="40" />
   <tile category="0" posx="2" posy="41" />
   <tile category="0" posx="2" posy="42" />
-  <tile category="0" posx="2" posy="43" />
-  <tile category="0" posx="2" posy="44" />
-  <tile category="0" posx="2" posy="45" />
-  <tile category="0" posx="2" posy="46" />
-  <tile category="0" posx="2" posy="47" />
+  <tile category="200" posx="2" posy="43" />
+  <tile category="200" posx="2" posy="44" />
+  <tile category="200" posx="2" posy="45" />
+  <tile category="200" posx="2" posy="46" />
+  <tile category="200" posx="2" posy="47" />
   <tile category="0" posx="2" posy="48" />
   <tile category="0" posx="2" posy="49" />
   <tile category="0" posx="3" posy="0" />
@@ -193,11 +193,11 @@
   <tile category="0" posx="3" posy="40" />
   <tile category="0" posx="3" posy="41" />
   <tile category="0" posx="3" posy="42" />
-  <tile category="0" posx="3" posy="43" />
+  <tile category="200" posx="3" posy="43" />
   <tile category="0" posx="3" posy="44" />
   <tile category="0" posx="3" posy="45" />
   <tile category="0" posx="3" posy="46" />
-  <tile category="0" posx="3" posy="47" />
+  <tile category="200" posx="3" posy="47" />
   <tile category="0" posx="3" posy="48" />
   <tile category="0" posx="3" posy="49" />
   <tile category="0" posx="4" posy="0" />
@@ -243,11 +243,11 @@
   <tile category="0" posx="4" posy="40" />
   <tile category="0" posx="4" posy="41" />
   <tile category="0" posx="4" posy="42" />
-  <tile category="0" posx="4" posy="43" />
+  <tile category="200" posx="4" posy="43" />
   <tile category="0" posx="4" posy="44" />
   <tile category="0" posx="4" posy="45" />
   <tile category="0" posx="4" posy="46" />
-  <tile category="0" posx="4" posy="47" />
+  <tile category="200" posx="4" posy="47" />
   <tile category="0" posx="4" posy="48" />
   <tile category="0" posx="4" posy="49" />
   <tile category="0" posx="5" posy="0" />
@@ -293,11 +293,11 @@
   <tile category="0" posx="5" posy="40" />
   <tile category="0" posx="5" posy="41" />
   <tile category="0" posx="5" posy="42" />
-  <tile category="0" posx="5" posy="43" />
+  <tile category="200" posx="5" posy="43" />
   <tile category="0" posx="5" posy="44" />
   <tile category="0" posx="5" posy="45" />
   <tile category="0" posx="5" posy="46" />
-  <tile category="0" posx="5" posy="47" />
+  <tile category="200" posx="5" posy="47" />
   <tile category="0" posx="5" posy="48" />
   <tile category="0" posx="5" posy="49" />
   <tile category="0" posx="6" posy="0" />
@@ -343,11 +343,11 @@
   <tile category="0" posx="6" posy="40" />
   <tile category="0" posx="6" posy="41" />
   <tile category="0" posx="6" posy="42" />
-  <tile category="0" posx="6" posy="43" />
+  <tile category="200" posx="6" posy="43" />
   <tile category="0" posx="6" posy="44" />
   <tile category="0" posx="6" posy="45" />
   <tile category="0" posx="6" posy="46" />
-  <tile category="0" posx="6" posy="47" />
+  <tile category="200" posx="6" posy="47" />
   <tile category="0" posx="6" posy="48" />
   <tile category="0" posx="6" posy="49" />
   <tile category="0" posx="7" posy="0" />
@@ -393,11 +393,11 @@
   <tile category="0" posx="7" posy="40" />
   <tile category="0" posx="7" posy="41" />
   <tile category="0" posx="7" posy="42" />
-  <tile category="0" posx="7" posy="43" />
-  <tile category="0" posx="7" posy="44" />
-  <tile category="0" posx="7" posy="45" />
-  <tile category="0" posx="7" posy="46" />
-  <tile category="0" posx="7" posy="47" />
+  <tile category="200" posx="7" posy="43" />
+  <tile category="200" posx="7" posy="44" />
+  <tile category="200" posx="7" posy="45" />
+  <tile category="200" posx="7" posy="46" />
+  <tile category="200" posx="7" posy="47" />
   <tile category="0" posx="7" posy="48" />
   <tile category="0" posx="7" posy="49" />
   <tile category="0" posx="8" posy="0" />
@@ -508,7 +508,7 @@
   <tile category="0" posx="10" posy="5" />
   <tile category="0" posx="10" posy="6" />
   <tile category="0" posx="10" posy="7" />
-  <tile category="0" posx="10" posy="8" />
+  <tile category="200" posx="10" posy="8" />
   <tile category="0" posx="10" posy="9" />
   <tile category="0" posx="10" posy="10" />
   <tile category="0" posx="10" posy="11" />
@@ -558,7 +558,7 @@
   <tile category="0" posx="11" posy="5" />
   <tile category="0" posx="11" posy="6" />
   <tile category="0" posx="11" posy="7" />
-  <tile category="0" posx="11" posy="8" />
+  <tile category="200" posx="11" posy="8" />
   <tile category="0" posx="11" posy="9" />
   <tile category="0" posx="11" posy="10" />
   <tile category="0" posx="11" posy="11" />
@@ -608,7 +608,7 @@
   <tile category="0" posx="12" posy="5" />
   <tile category="0" posx="12" posy="6" />
   <tile category="0" posx="12" posy="7" />
-  <tile category="0" posx="12" posy="8" />
+  <tile category="200" posx="12" posy="8" />
   <tile category="0" posx="12" posy="9" />
   <tile category="0" posx="12" posy="10" />
   <tile category="0" posx="12" posy="11" />
@@ -658,7 +658,7 @@
   <tile category="0" posx="13" posy="5" />
   <tile category="0" posx="13" posy="6" />
   <tile category="0" posx="13" posy="7" />
-  <tile category="0" posx="13" posy="8" />
+  <tile category="200" posx="13" posy="8" />
   <tile category="0" posx="13" posy="9" />
   <tile category="0" posx="13" posy="10" />
   <tile category="0" posx="13" posy="11" />
@@ -708,7 +708,7 @@
   <tile category="0" posx="14" posy="5" />
   <tile category="0" posx="14" posy="6" />
   <tile category="0" posx="14" posy="7" />
-  <tile category="0" posx="14" posy="8" />
+  <tile category="200" posx="14" posy="8" />
   <tile category="0" posx="14" posy="9" />
   <tile category="0" posx="14" posy="10" />
   <tile category="0" posx="14" posy="11" />
@@ -1134,9 +1134,9 @@
   <tile category="0" posx="22" posy="31" />
   <tile category="0" posx="22" posy="32" />
   <tile category="0" posx="22" posy="33" />
-  <tile category="0" posx="22" posy="34" />
-  <tile category="0" posx="22" posy="35" />
-  <tile category="0" posx="22" posy="36" />
+  <tile category="200" posx="22" posy="34" />
+  <tile category="200" posx="22" posy="35" />
+  <tile category="200" posx="22" posy="36" />
   <tile category="0" posx="22" posy="37" />
   <tile category="0" posx="22" posy="38" />
   <tile category="0" posx="22" posy="39" />
@@ -1184,9 +1184,9 @@
   <tile category="0" posx="23" posy="31" />
   <tile category="0" posx="23" posy="32" />
   <tile category="0" posx="23" posy="33" />
-  <tile category="0" posx="23" posy="34" />
-  <tile category="0" posx="23" posy="35" />
-  <tile category="0" posx="23" posy="36" />
+  <tile category="200" posx="23" posy="34" />
+  <tile category="200" posx="23" posy="35" />
+  <tile category="200" posx="23" posy="36" />
   <tile category="0" posx="23" posy="37" />
   <tile category="0" posx="23" posy="38" />
   <tile category="0" posx="23" posy="39" />
@@ -1234,9 +1234,9 @@
   <tile category="0" posx="24" posy="31" />
   <tile category="0" posx="24" posy="32" />
   <tile category="0" posx="24" posy="33" />
-  <tile category="0" posx="24" posy="34" />
-  <tile category="0" posx="24" posy="35" />
-  <tile category="0" posx="24" posy="36" />
+  <tile category="200" posx="24" posy="34" />
+  <tile category="200" posx="24" posy="35" />
+  <tile category="200" posx="24" posy="36" />
   <tile category="0" posx="24" posy="37" />
   <tile category="0" posx="24" posy="38" />
   <tile category="0" posx="24" posy="39" />
@@ -1269,8 +1269,8 @@
   <tile category="0" posx="25" posy="16" />
   <tile category="0" posx="25" posy="17" />
   <tile category="0" posx="25" posy="18" />
-  <tile category="0" posx="25" posy="19" />
-  <tile category="0" posx="25" posy="20" />
+  <tile category="200" posx="25" posy="19" />
+  <tile category="200" posx="25" posy="20" />
   <tile category="0" posx="25" posy="21" />
   <tile category="0" posx="25" posy="22" />
   <tile category="0" posx="25" posy="23" />
@@ -1284,9 +1284,9 @@
   <tile category="0" posx="25" posy="31" />
   <tile category="0" posx="25" posy="32" />
   <tile category="0" posx="25" posy="33" />
-  <tile category="0" posx="25" posy="34" />
-  <tile category="0" posx="25" posy="35" />
-  <tile category="0" posx="25" posy="36" />
+  <tile category="200" posx="25" posy="34" />
+  <tile category="200" posx="25" posy="35" />
+  <tile category="200" posx="25" posy="36" />
   <tile category="0" posx="25" posy="37" />
   <tile category="0" posx="25" posy="38" />
   <tile category="0" posx="25" posy="39" />
@@ -1319,8 +1319,8 @@
   <tile category="0" posx="26" posy="16" />
   <tile category="0" posx="26" posy="17" />
   <tile category="0" posx="26" posy="18" />
-  <tile category="0" posx="26" posy="19" />
-  <tile category="0" posx="26" posy="20" />
+  <tile category="200" posx="26" posy="19" />
+  <tile category="200" posx="26" posy="20" />
   <tile category="0" posx="26" posy="21" />
   <tile category="0" posx="26" posy="22" />
   <tile category="0" posx="26" posy="23" />
@@ -1334,9 +1334,9 @@
   <tile category="0" posx="26" posy="31" />
   <tile category="0" posx="26" posy="32" />
   <tile category="0" posx="26" posy="33" />
-  <tile category="0" posx="26" posy="34" />
-  <tile category="0" posx="26" posy="35" />
-  <tile category="0" posx="26" posy="36" />
+  <tile category="200" posx="26" posy="34" />
+  <tile category="200" posx="26" posy="35" />
+  <tile category="200" posx="26" posy="36" />
   <tile category="0" posx="26" posy="37" />
   <tile category="0" posx="26" posy="38" />
   <tile category="0" posx="26" posy="39" />
@@ -1384,9 +1384,9 @@
   <tile category="0" posx="27" posy="31" />
   <tile category="0" posx="27" posy="32" />
   <tile category="0" posx="27" posy="33" />
-  <tile category="0" posx="27" posy="34" />
-  <tile category="0" posx="27" posy="35" />
-  <tile category="0" posx="27" posy="36" />
+  <tile category="200" posx="27" posy="34" />
+  <tile category="200" posx="27" posy="35" />
+  <tile category="200" posx="27" posy="36" />
   <tile category="0" posx="27" posy="37" />
   <tile category="0" posx="27" posy="38" />
   <tile category="0" posx="27" posy="39" />
@@ -1808,7 +1808,7 @@
   <tile category="0" posx="36" posy="5" />
   <tile category="0" posx="36" posy="6" />
   <tile category="0" posx="36" posy="7" />
-  <tile category="0" posx="36" posy="8" />
+  <tile category="200" posx="36" posy="8" />
   <tile category="0" posx="36" posy="9" />
   <tile category="0" posx="36" posy="10" />
   <tile category="0" posx="36" posy="11" />
@@ -1858,7 +1858,7 @@
   <tile category="0" posx="37" posy="5" />
   <tile category="0" posx="37" posy="6" />
   <tile category="0" posx="37" posy="7" />
-  <tile category="0" posx="37" posy="8" />
+  <tile category="200" posx="37" posy="8" />
   <tile category="0" posx="37" posy="9" />
   <tile category="0" posx="37" posy="10" />
   <tile category="0" posx="37" posy="11" />
@@ -1908,7 +1908,7 @@
   <tile category="0" posx="38" posy="5" />
   <tile category="0" posx="38" posy="6" />
   <tile category="0" posx="38" posy="7" />
-  <tile category="0" posx="38" posy="8" />
+  <tile category="200" posx="38" posy="8" />
   <tile category="0" posx="38" posy="9" />
   <tile category="0" posx="38" posy="10" />
   <tile category="0" posx="38" posy="11" />
@@ -1958,7 +1958,7 @@
   <tile category="0" posx="39" posy="5" />
   <tile category="0" posx="39" posy="6" />
   <tile category="0" posx="39" posy="7" />
-  <tile category="0" posx="39" posy="8" />
+  <tile category="200" posx="39" posy="8" />
   <tile category="0" posx="39" posy="9" />
   <tile category="0" posx="39" posy="10" />
   <tile category="0" posx="39" posy="11" />
@@ -2008,7 +2008,7 @@
   <tile category="0" posx="40" posy="5" />
   <tile category="0" posx="40" posy="6" />
   <tile category="0" posx="40" posy="7" />
-  <tile category="0" posx="40" posy="8" />
+  <tile category="200" posx="40" posy="8" />
   <tile category="0" posx="40" posy="9" />
   <tile category="0" posx="40" posy="10" />
   <tile category="0" posx="40" posy="11" />
