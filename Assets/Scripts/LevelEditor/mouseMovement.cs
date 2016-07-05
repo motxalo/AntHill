@@ -16,7 +16,8 @@ public class mouseMovement : MonoBehaviour {
 		Ray touchRay = new Ray (transform.position, Vector3.forward);
 		int rayDistance = 20;
 		Debug.DrawRay (transform.position, Vector3.forward * rayDistance);
-		if (Input.GetMouseButtonDown(0)) {
+		//if (Input.GetMouseButtonDown(0)) {
+		if (Input.GetMouseButton(0)) {	
 			if (Physics.Raycast (touchRay, out hit, rayDistance)) {
 				if (hit.transform.tag == "planosEditor") {
 					if(selectedTileId < 0) return;
