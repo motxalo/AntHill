@@ -10,7 +10,12 @@ public static class LevelEditorManager  {
 
 	static Dictionary<int,Texture> textureSet;
 
+    static GameObject botones;
+
 	public static void Init(int xlength, int ylength){
+
+        botones = GameObject.Find("Buttons");
+
 		TextAsset xmlSourceAsset = null;
 		XDocument xmlDoc = null;
 		Debug.Log("CARGANDO MAPA : /EditorMaps/mapa" );
@@ -133,5 +138,12 @@ public static class LevelEditorManager  {
 		Debug.Log ("items salvados");
 		//docMap.Save( Application.dataPath + "map.xml" );
 	}
+
+    public static void tabHide() {
+        if (botones.transform.position == new Vector3(5, 0, -5))
+            botones.transform.position = new Vector3(20,0,-5);
+        else
+            botones.transform.position = new Vector3(5, 0, -5);
+    }
 
 }

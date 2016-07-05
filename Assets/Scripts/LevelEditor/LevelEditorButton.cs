@@ -7,8 +7,9 @@ public class LevelEditorButton : MonoBehaviour {
 
 	public int tileId;
 	public bool save=false;
+    public bool tab = false;
 
-	void Awake(){
+    void Awake(){
 		if(!save){
 			LevelEditorManager.AddTexture(tileId,GetComponent<MeshRenderer>().material.mainTexture);
 		}
@@ -22,10 +23,15 @@ public class LevelEditorButton : MonoBehaviour {
 	
 
 	public void DoClicked () {
-		if (save) {
-			LevelEditorManager.SaveToXML ();
-		}
-		else
-			editorController.SetSelectedTile(tileId,GetComponent<MeshRenderer>().material.mainTexture);
+        if (save)
+        {
+            LevelEditorManager.SaveToXML();
+        }
+        else if (tab)
+        {
+            LevelEditorManager.tabHide();
+        }
+        else
+            editorController.SetSelectedTile(tileId, GetComponent<MeshRenderer>().material.mainTexture);
 	}
 }
