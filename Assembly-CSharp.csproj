@@ -48,7 +48,9 @@
      <Compile Include="Assets\Fx Explosion Pack\Script\DestroyEffect.cs" />
      <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Game\GameModes\CaptureTheFlag.cs" />
      <Compile Include="Assets\Scripts\Items\Coin.cs" />
+     <Compile Include="Assets\Scripts\Items\Flag.cs" />
      <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\Level\MapManager.cs" />
      <Compile Include="Assets\Scripts\Level\Tile.cs" />
@@ -65,11 +67,13 @@
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
      <None Include="Assets\Resources\Maps\mapaPrueba3\objetos.xml" />
      <None Include="Assets\Resources\Maps\cabeza\objetos.xml" />
+     <None Include="Assets\Resources\EditorMaps\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba3\mapa.xml" />
      <None Include="Assets\Levels\XML\levelManager.xml" />
      <None Include="Assets\Resources\Maps\football\objetos.xml" />
      <None Include="Assets\Resources\Maps\verdades\mapa.xml" />
      <None Include="Assets\Resources\Maps\cabeza\mapa.xml" />
+     <None Include="Assets\Resources\EditorMaps\objetos.xml" />
      <None Include="Assets\Resources\Maps\tanks\objetos.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba2\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba\objetos.xml" />

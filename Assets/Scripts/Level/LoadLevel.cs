@@ -70,7 +70,9 @@ public class LoadLevel : MonoBehaviour {
 					cube.transform.position += new Vector3(.5f,.5f,.5f);
 					cube.transform.parent = gameObject.transform;
 					cube.name ="Object"+x+"_"+y;
+					cube.SendMessage("SetID",value,SendMessageOptions.DontRequireReceiver);
 				}
+
 			}
 		}
 		// Debug para el borde

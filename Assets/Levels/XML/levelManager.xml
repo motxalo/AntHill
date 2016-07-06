@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
   <map name="mapaPrueba"  p1 = "1" p2 = "1" p3 = "1" p4 ="1" />
-  <map name="football" p1 = "0" p2 = "0" p3 = "1" p4 ="0" />
+  <map name="football" p1 = "0" p2 = "1" p3 = "1" p4 ="0" />
   <map name="cabeza" p1 = "1" p2 = "1" p3 = "0" p4 ="0" />
   <map name="verdades" p1 = "1" p2 = "1" p3 = "1" p4 ="1" />
   <map name="tanks" p1 = "1" p2 = "1" p3 = "1" p4 ="1" />

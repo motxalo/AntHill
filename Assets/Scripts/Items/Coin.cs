@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour {
 		transform.Rotate(Vector3.forward, Time.deltaTime * rotateSpeed);
 	}
 
-	public void PlayerEnter(){
+	public void PlayerEnter(PlayerController _player){
 		Destroy(gameObject);
 	}
 }

@@ -13,13 +13,17 @@ public class PlayerController : MonoBehaviour {
 
 	private bool canMove =true;
 
+	private Vector3 startPos;
+
 	// Use this for initialization
 	void Start () {
+		startPos = transform.position;
 		gameObject.name="Player"+playerId;
 		realBombfrec = 0f;
 		canMove = true;
 		rb = GetComponent<Rigidbody>();
 		SetupCamera();
+		SetupTeam();
 	}
 	
 	// Update is called once per frame
@@ -57,22 +61,43 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Die(){
+		if(!canMove) return;
 		Debug.Log(" DIE : "+gameObject.name);
 		canMove = false;
 		rb.isKinematic = true;
+		oldColor = GetComponent<Renderer>().material.color;
 		GetComponent<Renderer>().material.color = Color.black;
+		GameObject.Find("GameMode").SendMessage("Death",this,SendMessageOptions.DontRequireReceiver);
+	}
+
+	private Color oldColor;
+
+	public void Respawn(float _time){
+		canMove = true;
+		rb.isKinematic = false;
+		GetComponent<Renderer>().material.color = oldColor;
+		Invoke("RealRespawn",_time);
+	}
+
+	void RealRespawn(){
+		transform.position = startPos;
+		canMove = true;
 	}
 
 	// TEEAM FUNCTIONS 
 
-	private int teamId;
+	public int teamId;
 
 	void SetupTeam(){
 		// Solo miro el numero de jugadores, pero habria q mirar tb el modo de juego,
-		if (PlayerPrefs.GetInt("Players")>= 3)
+		if (PlayerPrefs.GetInt("Players")>= 3 && playerId >= 2 || PlayerPrefs.GetInt("Players") == 2 && playerId == 1)
 			teamId = 1;
 		else 
 			teamId=0;
+	}
+
+	public int GetTeam(){
+		return teamId;
 	}
 
 	// CAMERA FUNCTIONS
@@ -86,10 +111,34 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if(other.tag == "object")
-			other.gameObject.SendMessage("PlayerEnter", SendMessageOptions.DontRequireReceiver);
+			other.gameObject.SendMessage("PlayerEnter", this,  SendMessageOptions.DontRequireReceiver);
 	}
 
 	void OnTriggerExit(Collider other) {
-		other.gameObject.SendMessage("PlayerExit", SendMessageOptions.DontRequireReceiver);
+		other.gameObject.SendMessage("PlayerExit",this, SendMessageOptions.DontRequireReceiver);
+	}
+
+	// FLAG FUNCTIONS
+
+	private Flag flag;
+
+	public void GetFlag(Flag _flag){
+		if(flag == null )
+		flag = _flag;
+	}
+
+	public void ScoreFlag(){
+		if(flag!=null){
+			Debug.Log (" POINT SCORED TEAM : "+teamId);
+			GameObject.Find("GameMode").GetComponent<CaptureTheFlag>().PointScored(teamId);
+			RemoveFlag();
+		}
+	}
+
+	public void RemoveFlag(){
+		if (flag != null){
+			flag.Restore();
+			flag = null;
+		}
 	}
 }

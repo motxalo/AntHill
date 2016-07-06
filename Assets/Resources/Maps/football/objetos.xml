@@ -1202,7 +1202,7 @@
   <tile category="0" posx="23" posy="49" />
   <tile category="0" posx="24" posy="0" />
   <tile category="0" posx="24" posy="1" />
-  <tile category="0" posx="24" posy="2" />
+  <tile category="201" posx="24" posy="2" />
   <tile category="0" posx="24" posy="3" />
   <tile category="0" posx="24" posy="4" />
   <tile category="0" posx="24" posy="5" />
@@ -1248,7 +1248,7 @@
   <tile category="0" posx="24" posy="45" />
   <tile category="0" posx="24" posy="46" />
   <tile category="0" posx="24" posy="47" />
-  <tile category="0" posx="24" posy="48" />
+  <tile category="202" posx="24" posy="48" />
   <tile category="0" posx="24" posy="49" />
   <tile category="0" posx="25" posy="0" />
   <tile category="0" posx="25" posy="1" />
