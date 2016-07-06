@@ -13,7 +13,7 @@ public class LevelEditorTab : MonoBehaviour {
     void Start () {
         if (hide)
         {
-            target = new Vector3(20, 0, -5);
+            target = new Vector3(25, 0, -5);
         }
         else
         {
@@ -33,12 +33,12 @@ public class LevelEditorTab : MonoBehaviour {
             hide = false;
             target = new Vector3(5, 0, -5);
             other.transform.GetComponent<LevelEditorTab>().hide = true;
-            other.transform.GetComponent<LevelEditorTab>().target = new Vector3(20, 0, -5);
+            other.transform.GetComponent<LevelEditorTab>().target = new Vector3(25, 0, -5);
         }
         else
         {
             hide = true;
-            target = new Vector3(20, 0, -5);
+            target = new Vector3(25, 0, -5);
         }
             
     }
