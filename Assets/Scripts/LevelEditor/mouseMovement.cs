@@ -28,7 +28,11 @@ public class mouseMovement : MonoBehaviour {
 				}else if(hit.transform.tag == "botonEditor"){
 					hit.transform.GetComponent<LevelEditorButton>().DoClicked();
 				}
-			}
+                else if (hit.transform.tag == "tabEditor")
+                {
+                    hit.transform.GetComponent<LevelEditorTab>().DoClicked();
+                }
+            }   
 		}
 		posMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		transform.position = new Vector3(posMouse.x,posMouse.y,transform.position.z);

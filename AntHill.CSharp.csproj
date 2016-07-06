@@ -72,7 +72,9 @@
     <Compile Include="Assets\Fx Explosion Pack\Script\DestroyEffect.cs" />
     <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game\GameModes\CaptureTheFlag.cs" />
     <Compile Include="Assets\Scripts\Items\Coin.cs" />
+    <Compile Include="Assets\Scripts\Items\Flag.cs" />
     <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />
     <Compile Include="Assets\Scripts\Level\MapManager.cs" />
     <Compile Include="Assets\Scripts\Level\Tile.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorCamera.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorManager.cs" />
+    <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTab.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
     <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
