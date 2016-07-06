@@ -7,16 +7,17 @@ public class LevelEditorTab : MonoBehaviour {
     public Vector3 target;
     public float speed = 0.5f;
     public GameObject menu;
+    public GameObject other;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         if (hide)
         {
             target = new Vector3(20, 0, -5);
         }
         else
         {
-            target = new Vector3(5, 0, -5);
+            target = new Vector3(0, 0, -5);
         }
     }
 	
@@ -31,6 +32,8 @@ public class LevelEditorTab : MonoBehaviour {
         {
             hide = false;
             target = new Vector3(5, 0, -5);
+            other.transform.GetComponent<LevelEditorTab>().hide = true;
+            other.transform.GetComponent<LevelEditorTab>().target = new Vector3(20, 0, -5);
         }
         else
         {
