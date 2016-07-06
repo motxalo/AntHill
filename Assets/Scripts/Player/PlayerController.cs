@@ -63,6 +63,17 @@ public class PlayerController : MonoBehaviour {
 		GetComponent<Renderer>().material.color = Color.black;
 	}
 
+	// TEEAM FUNCTIONS 
+
+	private int teamId;
+
+	void SetupTeam(){
+		// Solo miro el numero de jugadores, pero habria q mirar tb el modo de juego,
+		if (PlayerPrefs.GetInt("Players")>= 3)
+			teamId = 1;
+		else 
+			teamId=0;
+	}
 
 	// CAMERA FUNCTIONS
 
