@@ -25,7 +25,7 @@ public class LevelSelectMenu : MonoBehaviour {
 			xmlDoc = XDocument.Parse (xmlSourceAsset.text);
 			foreach(XElement tile in xmlDoc.Descendants("map"))
 			{
-				bool mapOk  = (1==int.Parse(""+tile.Attribute("p"+PlayerPrefs.GetInt("Players")).Value));
+				bool mapOk  = (1==int.Parse(""+tile.Attribute("p"+PlayerPrefs.GetInt("Players")).Value)) && ((1==int.Parse(""+tile.Attribute("mode"+PlayerPrefs.GetInt("GameMode")).Value)));
 				if (mapOk){
 					GameObject go;
 					if(sep==0)
@@ -51,6 +51,6 @@ public class LevelSelectMenu : MonoBehaviour {
 	}
 
 	public void BackToMenu(){
-		Application.LoadLevel(0);
+		Application.LoadLevel(1);
 	}
 }
