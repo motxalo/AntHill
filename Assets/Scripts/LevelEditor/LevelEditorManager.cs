@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Linq;
 
-public static class LevelEditorManager  {
+	public static class LevelEditorManager  {
 
 	static int[,] map;
 

@@ -46,7 +46,7 @@ public class LevelSelectMenu : MonoBehaviour {
 
 	public void StartLevel(UnityEngine.UI.Text _text){
 		PlayerPrefs.SetString("MAPNAME",_text.text);
-		Application.LoadLevel(2);
+		Application.LoadLevel(3);
 		
 	}
 
