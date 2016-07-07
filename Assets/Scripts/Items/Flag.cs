@@ -7,7 +7,9 @@ public class Flag : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (PlayerPrefs.GetInt("GameMode") != 2){
+			Destroy(this.gameObject);
+		}
 	}
 	
 	// Update is called once per frame

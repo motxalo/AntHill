@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour {
 	private Color oldColor;
 
 	public void Respawn(float _time){
-		canMove = true;
-		rb.isKinematic = false;
-		GetComponent<Renderer>().material.color = oldColor;
 		Invoke("RealRespawn",_time);
 	}
 
 	void RealRespawn(){
+		canMove = true;
+		rb.isKinematic = false;
+		GetComponent<Renderer>().material.color = oldColor;
 		transform.position = startPos;
 		canMove = true;
 	}

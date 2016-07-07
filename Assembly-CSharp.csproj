@@ -49,6 +49,7 @@
      <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\GameModes\CaptureTheFlag.cs" />
+     <Compile Include="Assets\Scripts\Game\GameModes\Deathmatch.cs" />
      <Compile Include="Assets\Scripts\Items\Coin.cs" />
      <Compile Include="Assets\Scripts\Items\Flag.cs" />
      <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />

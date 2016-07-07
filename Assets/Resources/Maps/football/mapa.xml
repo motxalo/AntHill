@@ -1274,7 +1274,7 @@
   <tile category="0" posx="25" posy="21" />
   <tile category="0" posx="25" posy="22" />
   <tile category="102" posx="25" posy="23" />
-  <tile category="0" posx="25" posy="24" />
+  <tile category="103" posx="25" posy="24" />
   <tile category="1" posx="25" posy="25" />
   <tile category="1" posx="25" posy="26" />
   <tile category="0" posx="25" posy="27" />
