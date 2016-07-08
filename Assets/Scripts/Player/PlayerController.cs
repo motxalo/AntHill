@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 		realBombfrec += Time.deltaTime;
 		Vector3 movement = Vector3.zero;
 		movement += transform.forward 	* Input.GetAxis("Vertical"+playerId) 	* speed.x;
-		transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Horizontal"+playerId)	* speed.y);
+		transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Horizontal"+playerId)	* speed.y * Time.deltaTime);
 		//movement += transform.right 	* Input.GetAxis("Horizontal"+playerId)	* speed.y;
 		if(movement!= Vector3.zero){
 		//	Debug.Log("MOVEMENT : "+movement);
