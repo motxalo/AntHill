@@ -26,12 +26,16 @@ public class PlayerController : MonoBehaviour {
 
 	private Vector3 startPos;
 
+	public  float koTime = 3f;
+	private float realKoTime = 0f;
+
 	// Use this for initialization
 	void Start () {
 		startPos = transform.position;
 		gameObject.name="Player"+playerId;
 		realBombfrec = 0f;
 		realCCfrec = 0f;
+		realKoTime = 0f;
 		realSprint = sprintTime;
 		canMove = true;
 		rb = GetComponent<Rigidbody>();
@@ -42,7 +46,13 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//CCDebug();
 		if (!canMove || Time.timeScale == 0f) return;
+		if(realKoTime > 0f){
+			realKoTime -= Time.deltaTime;
+			transform.RotateAround(transform.position, Vector3.up, 100f * realKoTime / koTime * Time.deltaTime);
+			return;
+		}
 		UpdateUI();
 		realBombfrec = Mathf.Clamp(realBombfrec + Time.deltaTime,0,bombFrec);
 		realCCfrec	 = Mathf.Clamp(realCCfrec + Time.deltaTime,0,ccFrec);
@@ -92,9 +102,22 @@ public class PlayerController : MonoBehaviour {
 		gameObject.SendMessage("DoSpecialAttack",SendMessageOptions.DontRequireReceiver);
 	}
 
+	float hitDistance = .5f;
+
 	void CuerpoACuerpo(){
-		Debug.Log("Ataque CC player "+playerId);
+		//Debug.Log("Ataque CC player "+playerId);
 		realCCfrec = 0f;
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position + new Vector3(0f,.1f,0f) + transform.forward*.4f, transform.forward,out hit, hitDistance)){
+			if(hit.collider.tag == "Player"){
+				hit.collider.SendMessage("Knockout");
+			}
+			Debug.Log("ATAQUE CC A : "+hit.collider.name);
+		}
+	}
+
+	void CCDebug(){
+		Debug.DrawLine(transform.position + new Vector3(0f,.1f,0f) + transform.forward*.4f, transform.position + new Vector3(0f,.1f,0f) + transform.forward*hitDistance);
 	}
 
 	void Bomba(){
@@ -212,5 +235,10 @@ public class PlayerController : MonoBehaviour {
 			specialUI.localScale = Vector3.one;
 		else 
 			specialUI.localScale = Vector3.zero;
+	}
+
+	void Knockout(){
+		Debug.Log("KNOCKED OUT "+name);
+		realKoTime = koTime;
 	}
 }
