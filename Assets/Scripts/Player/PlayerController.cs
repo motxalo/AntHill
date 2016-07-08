@@ -3,13 +3,24 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public int playerId = 0;
-	public Vector2 speed = new Vector2(1f,1f);
+	public 	int playerId = 0;
+	public 	Vector2 speed = new Vector2(1f,1f);
+
 	public 	float bombFrec = 1f;
 	private float realBombfrec = 0f;
+
+	public 	float ccFrec = .5f;
+	private float realCCfrec = 0f;
+
+	private bool canSpecial = true;
+
+	public 	float sprintTime = 2f;
+	public 	float sprintRecoveryTime = .1f;
+	private float realSprint = 0f;
+
 	private Rigidbody rb;
 
-	public GameObject bomba;
+	public 	GameObject bomba;
 
 	private bool canMove =true;
 
@@ -20,6 +31,8 @@ public class PlayerController : MonoBehaviour {
 		startPos = transform.position;
 		gameObject.name="Player"+playerId;
 		realBombfrec = 0f;
+		realCCfrec = 0f;
+		realSprint = sprintTime;
 		canMove = true;
 		rb = GetComponent<Rigidbody>();
 		SetupCamera();
@@ -30,18 +43,37 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		if (!canMove || Time.timeScale == 0f) return;
 		realBombfrec += Time.deltaTime;
+		realCCfrec	 += Time.deltaTime;
+		float sprintMod = 1f;
+		// SPRINT
+		if(Input.GetButton("Sprint"+playerId)){
+			realSprint = Mathf.Clamp(realSprint - Time.deltaTime,0, sprintTime);
+			if(realSprint > 0f){
+				Debug.Log("SPRINTING");
+				sprintMod = 2f;
+			}
+		}else
+			realSprint = Mathf.Clamp(realSprint + sprintRecoveryTime * Time.deltaTime,0, sprintTime);
+		// MOVIMIENTO 
 		Vector3 movement = Vector3.zero;
 		movement += transform.forward 	* Input.GetAxis("Vertical"+playerId) 	* speed.x;
 		transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Horizontal"+playerId)	* speed.y * Time.deltaTime);
 		//movement += transform.right 	* Input.GetAxis("Horizontal"+playerId)	* speed.y;
 		if(movement!= Vector3.zero){
-		//	Debug.Log("MOVEMENT : "+movement);
-			rb.velocity = movement;
+			rb.velocity = movement * sprintMod;
 			//rb.MovePosition(transform.position + movement*Time.deltaTime);
 		}
-
+		// BOMBA
 		if (realBombfrec >= bombFrec && Input.GetButtonDown("Bomb"+playerId)){
 			Bomba();	
+		}
+		// CC
+		if (realCCfrec >= ccFrec && Input.GetButtonDown("CC"+playerId)){
+			CuerpoACuerpo();	
+		}
+		// Special
+		if (canSpecial && Input.GetButtonDown("Special"+playerId)){
+			Special();	
 		}
 
 		MapManager.PlayerIn(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z), playerId);
@@ -52,6 +84,16 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public GameObject panelDebug;
+
+	void Special(){
+		Debug.Log(" ATAQUE ESPECIAL");
+		gameObject.SendMessage("DoSpecialAttack",SendMessageOptions.DontRequireReceiver);
+	}
+
+	void CuerpoACuerpo(){
+		Debug.Log("Ataque CC player "+playerId);
+		realCCfrec = 0f;
+	}
 
 	void Bomba(){
 		Vector3 nearest = transform.position;// + transform.forward;
