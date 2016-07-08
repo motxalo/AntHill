@@ -1,0 +1,579 @@
+fileFormatVersion: 2
+guid: 63d9da46833144bcda417944bf4ab109
+timeCreated: 1467967783
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Wii - Mario Kart Wii - Items_0
+    21300002: Wii - Mario Kart Wii - Items_1
+    21300004: Wii - Mario Kart Wii - Items_2
+    21300006: Wii - Mario Kart Wii - Items_3
+    21300008: Wii - Mario Kart Wii - Items_4
+    21300010: Wii - Mario Kart Wii - Items_5
+    21300012: Wii - Mario Kart Wii - Items_6
+    21300014: Wii - Mario Kart Wii - Items_7
+    21300016: Wii - Mario Kart Wii - Items_8
+    21300018: Wii - Mario Kart Wii - Items_9
+    21300020: Wii - Mario Kart Wii - Items_10
+    21300022: Wii - Mario Kart Wii - Items_11
+    21300024: Wii - Mario Kart Wii - Items_12
+    21300026: Wii - Mario Kart Wii - Items_13
+    21300028: Wii - Mario Kart Wii - Items_14
+    21300030: Wii - Mario Kart Wii - Items_15
+    21300032: Wii - Mario Kart Wii - Items_16
+    21300034: Wii - Mario Kart Wii - Items_17
+    21300036: Wii - Mario Kart Wii - Items_18
+    21300038: Wii - Mario Kart Wii - Items_19
+    21300040: Wii - Mario Kart Wii - Items_20
+    21300042: Wii - Mario Kart Wii - Items_21
+    21300044: Wii - Mario Kart Wii - Items_22
+    21300046: Wii - Mario Kart Wii - Items_23
+    21300048: Wii - Mario Kart Wii - Items_24
+    21300050: Wii - Mario Kart Wii - Items_25
+    21300052: Wii - Mario Kart Wii - Items_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Wii - Mario Kart Wii - Items_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 144
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 29}
+        - {x: -22, y: 26}
+        - {x: -22, y: -29}
+        - {x: 13, y: -29}
+        - {x: 22, y: -22}
+        - {x: 22, y: 15}
+        - {x: 14, y: 29}
+    - name: Wii - Mario Kart Wii - Items_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 146
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 28}
+        - {x: -32, y: 17}
+        - {x: -32, y: -14}
+        - {x: -14, y: -28}
+        - {x: 12, y: -28}
+        - {x: 32, y: -16}
+        - {x: 32, y: 25}
+        - {x: 31, y: 28}
+    - name: Wii - Mario Kart Wii - Items_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 147
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -28, y: 1}
+        - {x: -28, y: -26}
+        - {x: -26, y: -27}
+        - {x: 25, y: -27}
+        - {x: 28, y: -22}
+        - {x: 28, y: 1}
+        - {x: 8, y: 27}
+    - name: Wii - Mario Kart Wii - Items_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 145
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 27}
+        - {x: -29, y: -26}
+        - {x: -26, y: -27}
+        - {x: 18, y: -27}
+        - {x: 29, y: -19}
+        - {x: 29, y: 27}
+    - name: Wii - Mario Kart Wii - Items_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 145
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 28}
+        - {x: -31, y: -27}
+        - {x: -30, y: -28}
+        - {x: 31, y: -28}
+        - {x: 31, y: 28}
+    - name: Wii - Mario Kart Wii - Items_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 145
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 27}
+        - {x: -9, y: 8}
+        - {x: -29, y: -4}
+        - {x: -29, y: -26}
+        - {x: -26, y: -27}
+        - {x: 29, y: -27}
+        - {x: 29, y: 13}
+        - {x: 12, y: 27}
+    - name: Wii - Mario Kart Wii - Items_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 145
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -28.5}
+        - {x: 29.5, y: -28.5}
+        - {x: 29.5, y: 10.5}
+        - {x: 23.5, y: 28.5}
+        - {x: -24.5, y: 28.5}
+        - {x: -29.5, y: 14.5}
+    - name: Wii - Mario Kart Wii - Items_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 146
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 27}
+        - {x: -28, y: 24}
+        - {x: -28, y: -21}
+        - {x: -11, y: -27}
+        - {x: 19, y: -27}
+        - {x: 28, y: -20}
+        - {x: 28, y: 27}
+    - name: Wii - Mario Kart Wii - Items_8
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 145
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 28.5}
+        - {x: -24, y: 10.5}
+        - {x: -24, y: -17.5}
+        - {x: -15, y: -28.5}
+        - {x: 15, y: -28.5}
+        - {x: 24, y: -22.5}
+        - {x: 24, y: 10.5}
+        - {x: 18, y: 28.5}
+    - name: Wii - Mario Kart Wii - Items_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 139
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.5, y: 32}
+        - {x: -14.5, y: 32}
+        - {x: -24.5, y: 8}
+        - {x: -24.5, y: -25}
+        - {x: -10.5, y: -32}
+        - {x: 17.5, y: -32}
+        - {x: 24.5, y: -24}
+        - {x: 24.5, y: 20}
+        - {x: 23.5, y: 28}
+    - name: Wii - Mario Kart Wii - Items_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 83
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.5, y: 26.5}
+        - {x: -20.5, y: 26.5}
+        - {x: -27.5, y: 18.5}
+        - {x: -27.5, y: -18.5}
+        - {x: -24.5, y: -26.5}
+        - {x: 21.5, y: -26.5}
+        - {x: 27.5, y: -13.5}
+        - {x: 27.5, y: 10.5}
+    - name: Wii - Mario Kart Wii - Items_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 83
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 24}
+        - {x: -29, y: 7}
+        - {x: -29, y: -16}
+        - {x: -16, y: -24}
+        - {x: 17, y: -24}
+        - {x: 29, y: -15}
+        - {x: 29, y: 10}
+        - {x: 15, y: 24}
+    - name: Wii - Mario Kart Wii - Items_12
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 78
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 28.5}
+        - {x: -28.5, y: -20.5}
+        - {x: -25.5, y: -28.5}
+        - {x: 5.5, y: -28.5}
+        - {x: 28.5, y: -12.5}
+        - {x: 28.5, y: 14.5}
+        - {x: 20.5, y: 28.5}
+    - name: Wii - Mario Kart Wii - Items_13
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 80
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 24}
+        - {x: -29, y: 18}
+        - {x: -29, y: -23}
+        - {x: -27, y: -24}
+        - {x: 20, y: -24}
+        - {x: 29, y: -11}
+        - {x: 29, y: 14}
+        - {x: 15, y: 24}
+    - name: Wii - Mario Kart Wii - Items_14
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 74
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 28.5}
+        - {x: -28, y: -27.5}
+        - {x: -24, y: -28.5}
+        - {x: 28, y: -28.5}
+        - {x: 28, y: 21.5}
+        - {x: 26, y: 28.5}
+    - name: Wii - Mario Kart Wii - Items_15
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 77
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 27.5}
+        - {x: -29, y: 4.5}
+        - {x: -29, y: -27.5}
+        - {x: 6, y: -27.5}
+        - {x: 29, y: -16.5}
+        - {x: 29, y: 27.5}
+    - name: Wii - Mario Kart Wii - Items_16
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 83
+        width: 58
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 18.5}
+        - {x: -29, y: 14.5}
+        - {x: -29, y: -13.5}
+        - {x: -27, y: -18.5}
+        - {x: 29, y: -18.5}
+        - {x: 29, y: 18.5}
+    - name: Wii - Mario Kart Wii - Items_17
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 74
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 28}
+        - {x: -28, y: 21}
+        - {x: -28, y: -15}
+        - {x: -22, y: -28}
+        - {x: 15, y: -28}
+        - {x: 28, y: -15}
+        - {x: 28, y: 17}
+        - {x: 18, y: 28}
+    - name: Wii - Mario Kart Wii - Items_18
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 73
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 28}
+        - {x: -26, y: 11}
+        - {x: -26, y: -18}
+        - {x: -18, y: -28}
+        - {x: 14, y: -28}
+        - {x: 26, y: -9}
+        - {x: 26, y: 26}
+        - {x: 25, y: 28}
+    - name: Wii - Mario Kart Wii - Items_19
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 71
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 26.5}
+        - {x: -30, y: -22.5}
+        - {x: -13, y: -26.5}
+        - {x: 18, y: -26.5}
+        - {x: 26, y: -21.5}
+        - {x: 30, y: -1.5}
+        - {x: 30, y: 26.5}
+    - name: Wii - Mario Kart Wii - Items_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 20
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 25.5}
+        - {x: -25.5, y: 22.5}
+        - {x: -25.5, y: -18.5}
+        - {x: -23.5, y: -25.5}
+        - {x: 21.5, y: -25.5}
+        - {x: 25.5, y: -18.5}
+        - {x: 25.5, y: 23.5}
+        - {x: 22.5, y: 25.5}
+    - name: Wii - Mario Kart Wii - Items_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 19
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 25.5}
+        - {x: -25.5, y: 22.5}
+        - {x: -25.5, y: -18.5}
+        - {x: -23.5, y: -25.5}
+        - {x: 21.5, y: -25.5}
+        - {x: 25.5, y: -18.5}
+        - {x: 25.5, y: 23.5}
+        - {x: 22.5, y: 25.5}
+    - name: Wii - Mario Kart Wii - Items_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 17
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 25.5}
+        - {x: -25.5, y: 22.5}
+        - {x: -25.5, y: -18.5}
+        - {x: -23.5, y: -25.5}
+        - {x: 21.5, y: -25.5}
+        - {x: 25.5, y: -18.5}
+        - {x: 25.5, y: 23.5}
+        - {x: 22.5, y: 25.5}
+    - name: Wii - Mario Kart Wii - Items_23
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 16
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 26.5}
+        - {x: -28, y: 21.5}
+        - {x: -28, y: -8.5}
+        - {x: -23, y: -26.5}
+        - {x: 22, y: -26.5}
+        - {x: 28, y: -13.5}
+        - {x: 28, y: 12.5}
+        - {x: 17, y: 26.5}
+    - name: Wii - Mario Kart Wii - Items_24
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 10
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 8}
+        - {x: 15, y: 28}
+        - {x: -11, y: 28}
+        - {x: -21, y: 26}
+        - {x: -21, y: -22}
+        - {x: -20, y: -28}
+        - {x: -1, y: -28}
+        - {x: 10, y: -16}
+        - {x: 19, y: -5}
+        - {x: 21, y: -3}
+    - name: Wii - Mario Kart Wii - Items_25
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 10
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: 28.5}
+        - {x: -21.5, y: 28.5}
+        - {x: -28.5, y: 22.5}
+        - {x: -28.5, y: -27.5}
+        - {x: -26.5, y: -28.5}
+        - {x: 28.5, y: -28.5}
+        - {x: 28.5, y: 11.5}
+        - {x: 26.5, y: 24.5}
+    - name: Wii - Mario Kart Wii - Items_26
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 6
+        width: 224
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -112, y: 29.5}
+        - {x: -112, y: -29.5}
+        - {x: 112, y: -29.5}
+        - {x: 112, y: 29.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

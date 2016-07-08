@@ -37,13 +37,15 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 		SetupCamera();
 		SetupTeam();
+		SetUI();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (!canMove || Time.timeScale == 0f) return;
-		realBombfrec += Time.deltaTime;
-		realCCfrec	 += Time.deltaTime;
+		UpdateUI();
+		realBombfrec = Mathf.Clamp(realBombfrec + Time.deltaTime,0,bombFrec);
+		realCCfrec	 = Mathf.Clamp(realCCfrec + Time.deltaTime,0,ccFrec);
 		float sprintMod = 1f;
 		// SPRINT
 		if(Input.GetButton("Sprint"+playerId)){
@@ -182,5 +184,33 @@ public class PlayerController : MonoBehaviour {
 			flag.Restore();
 			flag = null;
 		}
+	}
+
+	// UI Functions
+
+	private RectTransform sprintUI;
+	//private Rect sprintTRect;
+	private RectTransform bombUI;
+	private RectTransform specialUI;
+	private RectTransform ccUI;
+
+	void SetUI(){
+		int playersAmount = PlayerPrefs.GetInt("Players");
+		sprintUI = GameObject.Find("uiSprint"+playersAmount+""+playerId).GetComponent<RectTransform>();
+		//sprintTRect = sprintUI.rect;
+		bombUI = GameObject.Find("uiBomb"+playersAmount+""+playerId).GetComponent<RectTransform>();
+		specialUI = GameObject.Find("uiSpecial"+playersAmount+""+playerId).GetComponent<RectTransform>();
+		ccUI = GameObject.Find("uiCC"+playersAmount+""+playerId).GetComponent<RectTransform>();
+	}
+
+	void UpdateUI(){
+		//sprintTRect.width = 400f * realSprint / sprintTime;
+		sprintUI.sizeDelta = new Vector2(400f * realSprint / sprintTime,10f);
+		bombUI.localScale = Vector3.one * realBombfrec / bombFrec;
+		ccUI.localScale = Vector3.one * realCCfrec / ccFrec;
+		if (canSpecial)
+			specialUI.localScale = Vector3.one;
+		else 
+			specialUI.localScale = Vector3.zero;
 	}
 }

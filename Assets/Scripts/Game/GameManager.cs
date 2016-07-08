@@ -34,5 +34,6 @@ public class GameManager : MonoBehaviour {
 			if( (i+1) != playersAmount )
 				canvases[i].SetActive(false);
 		}
+
 	}
 }
