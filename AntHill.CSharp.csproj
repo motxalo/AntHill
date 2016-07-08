@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -73,6 +67,7 @@
     <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\GameModes\CaptureTheFlag.cs" />
+    <Compile Include="Assets\Scripts\Game\GameModes\Deathmatch.cs" />
     <Compile Include="Assets\Scripts\Items\Coin.cs" />
     <Compile Include="Assets\Scripts\Items\Flag.cs" />
     <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />
@@ -83,6 +78,7 @@
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorManager.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTab.cs" />
+    <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTabsManager.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
     <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\GameTypeMenu.cs" />
