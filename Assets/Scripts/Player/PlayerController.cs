@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public 	int playerId = 0;
+
+
 	public 	Vector2 speed = new Vector2(1f,1f);
 
 	public 	float bombFrec = 1f;
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 
 	public 	GameObject bomba;
 
-	private bool canMove =true;
+	public bool canMove =false;
 
 	private Vector3 startPos;
 
@@ -32,18 +34,22 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		startPos = transform.position;
-		gameObject.name="Player"+playerId;
 		realBombfrec = 0f;
 		realCCfrec = 0f;
 		realKoTime = 0f;
 		realSprint = sprintTime;
-		canMove = true;
 		rb = GetComponent<Rigidbody>();
+	}
+
+	public void InitWithId(int _id){
+		playerId = _id;
+		gameObject.name="Player"+_id;
 		SetupCamera();
 		SetupTeam();
 		SetUI();
+		Debug.Log("PLAYER : "+gameObject.name+" INIT");
+		canMove = true;
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		//CCDebug();
@@ -144,7 +150,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void RealRespawn(){
-		canMove = true;
 		rb.isKinematic = false;
 		GetComponent<Renderer>().material.color = oldColor;
 		transform.position = startPos;

@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour {
 		cameraFixed.SetActive(playersAmount==3);
 		Debug.Log("INIT GAME "+playersAmount+" PLAYERS");
 		for (int i = 0; i<playersAmount; i++){
-			GameObject player = GameObject.Instantiate(players[i] as GameObject) ;
+			GameObject player = GameObject.Instantiate(players[PlayerPrefs.GetInt("Character"+i)] as GameObject) ;
+			player.GetComponent<PlayerController>().InitWithId(i);
 			Vector2 pos = MapManager.GetPlayerPos(i);
 			player.transform.position = new Vector3(pos.x, 0f, pos.y) + new Vector3(.5f,.5f,.5f);;
 		}
