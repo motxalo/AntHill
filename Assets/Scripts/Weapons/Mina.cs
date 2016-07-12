@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bomb : MonoBehaviour {
+public class Mina : MonoBehaviour {
 
+
+	public int playerId = -1;
 	public Vector2 cell;
-	public float speed = 3f;
 	public int alcance = 3;
 	public GameObject effect;
 	// Use this for initialization
 	void Start () {
 		cell = new Vector2(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
-		Invoke("Explode",speed);
+		Invoke("RemoveRenderer",2f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		GetComponent<Renderer>().material.color = Color.Lerp(GetComponent<Renderer>().material.color,Color.red, Time.deltaTime / speed);
+
+	void RemoveRenderer(){
+		GetComponent<MeshRenderer>().enabled = false;
 	}
 
 	public void Explode(){
@@ -47,24 +47,9 @@ public class Bomb : MonoBehaviour {
 			Instantiate(effect, transform.position, transform.rotation);
 		Destroy (gameObject);
 		return;
-		for(int i=1; i<= alcance; i++){
-			//PROCESAR CANVAS
-			if(CanExplode (transform.position + new Vector3(1,0,0)*i))
-				Instantiate(effect, transform.position + new Vector3(1,0,0)*i, transform.rotation);
-			if(CanExplode(transform.position + new Vector3(-1,0,0)*i))
-				Instantiate(effect, transform.position + new Vector3(-1,0,0)*i, transform.rotation);
-			if(CanExplode(transform.position + new Vector3(0,0,1)*i))
-				Instantiate(effect, transform.position + new Vector3(0,0,1)*i, transform.rotation);
-			if(CanExplode(transform.position + new Vector3(0,0,-1)*i))
-				Instantiate(effect, transform.position + new Vector3(0,0,-1)*i, transform.rotation);
-		}
-
-		Instantiate(effect, transform.position, transform.rotation);
-
-		Destroy (gameObject);
 	}
 
-	public void DelayedExplode(){
+	void DelayedExplode(){
 		Debug.Log("CHAINED EXPLOSION : "+gameObject.name);
 		CancelInvoke("Explode");
 		Invoke("Explode",.1f);
@@ -86,7 +71,10 @@ public class Bomb : MonoBehaviour {
 		return ( tile == 0);
 	}
 
-	public void PlayerExit(){
-		GetComponent<BoxCollider>().isTrigger = false;
+	public void PlayerEnter(PlayerController _player){
+		if(playerId== _player.playerId && playerId != -1)
+			return;
+		Explode();
 	}
+
 }

@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Mina.cs" />
      <None Include="Assets\Resources\Maps\mapaPrueba3\objetos.xml" />
      <None Include="Assets\Resources\Maps\cabeza\objetos.xml" />
      <None Include="Assets\Resources\EditorMaps\mapa.xml" />
