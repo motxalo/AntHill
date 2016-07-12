@@ -62,6 +62,8 @@
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTab.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTabsManager.cs" />
      <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
+     <Compile Include="Assets\Scripts\Menus\CharSelectMenu.cs" />
+     <Compile Include="Assets\Scripts\Menus\CharSelector.cs" />
      <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\GameTypeMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
