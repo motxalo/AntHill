@@ -3,9 +3,7 @@ using System.Collections;
 
 public class CharDefensa : MonoBehaviour {
 
-
 	private PlayerController controller;
-
 
 	public float timeToRestore = 5f;
 	public float shieldTime = 2f;
