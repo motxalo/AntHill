@@ -29,12 +29,11 @@ public class CharObrera : MonoBehaviour {
 		Vector3 nearest = transform.position + transform.forward;
 		Vector3 tpos = new Vector3(Mathf.FloorToInt(nearest.x), 0f , Mathf.FloorToInt(nearest.z));
 		if(MapManager.GetTile(Mathf.FloorToInt(nearest.x),Mathf.FloorToInt(nearest.z)) == 0){
-			GameObject newMina = Instantiate(casilla, tpos + new Vector3(.5f,0f,.5f), Quaternion.identity) as GameObject;
-			newMina.name = "Tile"+Mathf.FloorToInt(nearest.x)+"_"+Mathf.FloorToInt(nearest.z);
+			GameObject newCasilla = Instantiate(casilla, tpos + new Vector3(.5f,0f,.5f), Quaternion.identity) as GameObject;
+			newCasilla.name = "Tile"+Mathf.FloorToInt(nearest.x)+"_"+Mathf.FloorToInt(nearest.z);
 			controller.canSpecial = false;
 			Invoke("RestoreSpecialAttack",timeToRestore);
 			MapManager.SetTile(Mathf.FloorToInt(nearest.x),Mathf.FloorToInt(nearest.z),2);
 		}
-		//newMina.GetComponent<Mina>().playerId = controller.playerId;
 	}
 }
