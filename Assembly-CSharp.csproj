@@ -67,6 +67,11 @@
      <Compile Include="Assets\Scripts\Menus\GameTypeMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\LevelSelectMenu.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\CharBerzerk.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\CharDefensa.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\CharExcavadora.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\CharObrera.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\CharStandar.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />

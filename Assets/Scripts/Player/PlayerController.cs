@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public 	float ccFrec = .5f;
 	private float realCCfrec = 0f;
 
-	private bool canSpecial = true;
+	[HideInInspector]
+	public bool canSpecial = true;
 
 	public 	float sprintTime = 2f;
 	public 	float sprintRecoveryTime = .1f;
