@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Die(){
-		if(!canMove) return;
+		if(!canMove || shielded) return;
 		Debug.Log(" DIE : "+gameObject.name);
 		canMove = false;
 		rb.isKinematic = true;
@@ -244,7 +244,17 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Knockout(){
+		if(shielded) return;
 		Debug.Log("KNOCKED OUT "+name);
 		realKoTime = koTime;
+	}
+
+	// COSAS ESPECÍFICAS DE PROFESION
+
+	private bool shielded = false;
+
+	public void SetShield(bool _shield){
+		RemoveFlag();
+		shielded = _shield;
 	}
 }
