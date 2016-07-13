@@ -58,10 +58,12 @@ public class Mina : MonoBehaviour {
 	bool CanExplode (Vector3 pos){
 		int tile = MapManager.GetTile(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z));
 		foreach (Bomb _b in FindObjectsOfType<Bomb>())
-			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y)
+			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y){
 				_b.DelayedExplode();
+				_b.playerId = playerId;
+			}
 		if(tile >= 100 ){
-			GameObject.Find("Player"+(tile-100)).SendMessage("Die");
+			GameObject.Find("Player"+(tile-100)).SendMessage("Die",playerId);
 			tile = 0;
 		}
 		if(tile == 2){
@@ -74,6 +76,7 @@ public class Mina : MonoBehaviour {
 	public void PlayerEnter(PlayerController _player){
 		if(playerId== _player.playerId && playerId != -1)
 			return;
+		_player.SendMessage("Die");
 		Explode();
 	}
 

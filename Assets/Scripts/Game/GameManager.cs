@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find("Map").GetComponent<LoadLevel>().DoLoading();
 		// CARGAR PLAYER
 		int playersAmount = PlayerPrefs.GetInt("Players");
+		StatManager.InitStats(playersAmount);
 		cameraFixed.SetActive(playersAmount==3);
 		Debug.Log("INIT GAME "+playersAmount+" PLAYERS");
 		for (int i = 0; i<playersAmount; i++){

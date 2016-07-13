@@ -140,12 +140,14 @@ public class PlayerController : MonoBehaviour {
 	void Bomba(){
 		Vector3 nearest = transform.position;// + transform.forward;
 		Vector3 tpos = new Vector3(Mathf.FloorToInt(nearest.x), 0, Mathf.FloorToInt(nearest.z));
-		Instantiate(bomba, tpos + new Vector3(.5f,0f,.5f), Quaternion.identity);
+		GameObject bmb = Instantiate(bomba, tpos + new Vector3(.5f,0f,.5f), Quaternion.identity) as GameObject;
+		bmb.GetComponent<Bomb>().playerId = playerId;
 		realBombfrec = 0f;
 	}
 
-	void Die(){
+	void Die(int killer){
 		if(!canMove || shielded) return;
+		StatManager.AddPoint(killer,playerId,1);
 		Debug.Log(" DIE : "+gameObject.name);
 		canMove = false;
 		rb.isKinematic = true;
@@ -177,6 +179,8 @@ public class PlayerController : MonoBehaviour {
 			teamId = 1;
 		else 
 			teamId=0;
+
+		StatManager.SetTeam(playerId,teamId);
 	}
 
 	public int GetTeam(){

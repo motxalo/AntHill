@@ -7,6 +7,8 @@ public class Bomb : MonoBehaviour {
 	public float speed = 3f;
 	public int alcance = 3;
 	public GameObject effect;
+	public int playerId = 0;
+
 	// Use this for initialization
 	void Start () {
 		cell = new Vector2(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.z));
@@ -73,10 +75,12 @@ public class Bomb : MonoBehaviour {
 	bool CanExplode (Vector3 pos){
 		int tile = MapManager.GetTile(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.z));
 		foreach (Bomb _b in FindObjectsOfType<Bomb>())
-			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y)
+			if(Mathf.FloorToInt(pos.x) == _b.cell.x && Mathf.FloorToInt(pos.z) == _b.cell.y){
 				_b.DelayedExplode();
+				_b.playerId = playerId;
+			}
 		if(tile >= 100 ){
-			GameObject.Find("Player"+(tile-100)).SendMessage("Die");
+			GameObject.Find("Player"+(tile-100)).SendMessage("Die",playerId);
 			tile = 0;
 		}
 		if(tile == 2){
