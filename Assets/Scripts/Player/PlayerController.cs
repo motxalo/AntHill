@@ -51,10 +51,20 @@ public class PlayerController : MonoBehaviour {
 		Debug.Log("PLAYER : "+gameObject.name+" INIT");
 		canMove = true;
 	}
+
+	bool blockedByCam = false;
 	// Update is called once per frame
 	void Update () {
 		//CCDebug();
-		if (!canMove || Time.timeScale == 0f) return;
+		if(Input.GetButtonDown("Camera"+playerId)){
+			rb.velocity = Vector3.zero;
+			GetComponentInChildren<PlayerCamera>().ChangeCameraMode(PlayerCamera.CameraMode.orthographic);
+			blockedByCam = true;
+		}else if(Input.GetButtonUp("Camera"+playerId)){
+			GetComponentInChildren<PlayerCamera>().ChangeCameraMode(PlayerCamera.CameraMode.perspective);
+			blockedByCam = false;
+		}
+		if (!canMove || Time.timeScale == 0f || blockedByCam) return;
 		if(realKoTime > 0f){
 			realKoTime -= Time.deltaTime;
 			transform.RotateAround(transform.position, Vector3.up, 100f * realKoTime / koTime * Time.deltaTime);
