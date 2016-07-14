@@ -57,6 +57,10 @@ public class EnemyPatrol : MonoBehaviour {
 	}
 		
 	void OnTriggerEnter(Collider other){
-		Destroy ( gameObject );
+		if(other.tag == "Player"){
+			other.transform.parent.SendMessage("Die",-1);
+		}
+		else
+			Destroy ( gameObject );
 	}
 }
