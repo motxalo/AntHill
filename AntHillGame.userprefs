@@ -1,16 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Weapons/Mina.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menus/InGameMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="130" Column="1" />
-      <File FileName="Assets/Scripts/Player/Characters/CharBerzerk.cs" Line="20" Column="3" />
-      <File FileName="Assets/Scripts/Player/Characters/CharDefensa.cs" Line="21" Column="3" />
-      <File FileName="Assets/Scripts/Player/Characters/CharExcavadora.cs" Line="20" Column="3" />
-      <File FileName="Assets/Scripts/Player/Characters/CharObrera.cs" Line="20" Column="3" />
-      <File FileName="Assets/Scripts/Player/Characters/CharStandar.cs" Line="34" Column="63" />
-      <File FileName="Assets/Scripts/Weapons/Bomb.cs" Line="67" Column="9" />
-      <File FileName="Assets/Scripts/Items/Coin.cs" Line="15" Column="3" />
-      <File FileName="Assets/Scripts/Weapons/Mina.cs" Line="14" Column="31" />
+      <File FileName="Assets/Scripts/Menus/InGameMenu.cs" Line="63" Column="42" />
+      <File FileName="Assets/Scripts/Game/StatManager.cs" Line="4" Column="33" />
+      <File FileName="Assets/Scripts/Menus/GameModeMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game/GameManager.cs" Line="18" Column="3" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="240" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
