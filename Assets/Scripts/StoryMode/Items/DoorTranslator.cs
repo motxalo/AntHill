@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DoorTranslator : MonoBehaviour {
 	public Vector2 destLevel = Vector2.zero;
-	public int destSpawn = 0;
+	public int	 destSpawn = 0;
 	Transform destiny;
 	private int players;
 	// Use this for initialization

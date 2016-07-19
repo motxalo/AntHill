@@ -23,4 +23,8 @@ public class GameTypeMenu : MonoBehaviour {
 	public void BackToMenu(){
 		Application.LoadLevel(0);
 	}
+
+	public void StartStoryMode(){
+		
+	}
 }

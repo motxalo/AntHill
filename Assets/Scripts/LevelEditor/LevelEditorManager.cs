@@ -21,8 +21,8 @@ using System.Xml.Linq;
 		Debug.Log("CARGANDO MAPA : /EditorMaps/mapa" );
 		xmlSourceAsset = Resources.Load("EditorMaps/mapa") as TextAsset;
 
+		map = new int[xlength,ylength];
 		if (xmlSourceAsset != null) {
-			map = new int[xlength,ylength];
 			for (int i=0; i<xlength;i++)
 				for (int k=0; k<ylength;k++){
 					map[i,k] = 0;
@@ -35,6 +35,10 @@ using System.Xml.Linq;
 				int value = int.Parse ("" + tile.Attribute ("category").Value);
 				SetTile (x, y, value);
 			}
+		}else{
+			for(int i = 0; i< xlength; i++)
+				for (int k = 0; k< ylength; k++)
+					SetTile(i,k,0);
 		}
 
 		Debug.Log("CARGANDO OBJETOS : /EditorMaps/objetos" );
