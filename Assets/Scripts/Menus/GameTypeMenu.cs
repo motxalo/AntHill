@@ -5,7 +5,7 @@ public class GameTypeMenu : MonoBehaviour {
 
 
 	public void StartFreeWalkMode () {
-		PlayerPrefs.SetInt("GameMode",0);
+		PlayerPrefs.SetInt("GameMode",-1);
 		Application.LoadLevel(2);
 	}
 
@@ -25,6 +25,8 @@ public class GameTypeMenu : MonoBehaviour {
 	}
 
 	public void StartStoryMode(){
-		
+		PlayerPrefs.SetInt("GameMode",0);
+		Application.LoadLevel(3);
+		PlayerPrefs.SetString("MAPNAME","Story_0_0");
 	}
 }
