@@ -78,6 +78,10 @@
      <Compile Include="Assets\Scripts\Player\Characters\CharStandar.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\StoryMode\Items\DoorTranslator.cs" />
+     <Compile Include="Assets\Scripts\StoryMode\OLD\Game\StoryGamePreo.cs" />
+     <Compile Include="Assets\Scripts\StoryMode\OLD\Map\MapSegment.cs" />
+     <Compile Include="Assets\Scripts\StoryMode\OLD\Map\SegmentManager.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
      <Compile Include="Assets\Scripts\Weapons\Mina.cs" />
      <None Include="Assets\Resources\Maps\mapaPrueba3\objetos.xml" />

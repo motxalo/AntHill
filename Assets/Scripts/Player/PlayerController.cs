@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//CCDebug();
+		if ( forcePos != Vector3.zero){
+			transform.position = Vector3.Lerp(transform.position,forcePos, speed.x*Time.deltaTime);
+			return;
+		}
 		if(Input.GetButtonDown("Camera"+playerId)){
 			rb.velocity = Vector3.zero;
 			GetComponentInChildren<PlayerCamera>().ChangeCameraMode(PlayerCamera.CameraMode.orthographic);
@@ -261,6 +265,19 @@ public class PlayerController : MonoBehaviour {
 		if(shielded) return;
 		Debug.Log("KNOCKED OUT "+name);
 		realKoTime = koTime;
+	}
+
+	// FORCE
+
+	private Vector3 forcePos = Vector3.zero;
+
+	public void ForceMove( Vector3 _pos){
+		forcePos = _pos;
+		forcePos.y = transform.position.y;
+	}
+
+	void EndForceMove(){
+		forcePos = Vector3.zero;
 	}
 
 	// COSAS ESPECÍFICAS DE PROFESION

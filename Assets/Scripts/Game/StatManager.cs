@@ -17,7 +17,7 @@ public static class StatManager  {
 			deaths[i] = 0;
 		}
 	}
-
+		
 	public static void SetTeam(int _player, int _team){
 		team[_player] = _team;
 	}
