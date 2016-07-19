@@ -65,7 +65,10 @@ public class LoadLevel : MonoBehaviour {
 
 				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
 				int value = int.Parse(""+tile.Attribute("category").Value);
-				if (value>= 200){
+				if(value>= 300){
+					
+				}
+				else if (value>= 200){
 					GameObject cube = Instantiate(objectsPrefab[value-200],tempPos + new Vector3(x, 0, y), Quaternion.Euler(new Vector3(90f,0f,0f))) as GameObject;
 					cube.transform.position += new Vector3(.5f,.5f,.5f);
 					cube.transform.parent = gameObject.transform;

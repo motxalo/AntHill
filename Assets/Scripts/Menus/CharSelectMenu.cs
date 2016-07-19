@@ -48,7 +48,10 @@ public class CharSelectMenu : MonoBehaviour {
 			if(ready[i] == false)
 				return;
 		}
-		Application.LoadLevel(4);
+		if(	PlayerPrefs.GetInt("GameMode") == 0)
+			Application.LoadLevel(5);
+		else
+			Application.LoadLevel(4);
 	}
 
 	public Vector2 playerDisplacement = new Vector2(50f, 50f);

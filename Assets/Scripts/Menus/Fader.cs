@@ -13,13 +13,13 @@ public class Fader : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 		image = transform.GetChild(0).GetComponent<UnityEngine.UI.Image>();
 		tColor = image.color;
-		FadeIn(5f);
+		FadeIn(2f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.A)) FadeIn(1f);
-		if(Input.GetKeyDown(KeyCode.S)) FadeOut(1f);
+		//if(Input.GetKeyDown(KeyCode.A)) FadeIn(1f);
+		//if(Input.GetKeyDown(KeyCode.S)) FadeOut(1f);
 		if( status == 1 ) {
 			if(image.color.a <= 0f) StopFade();
 			//tColor.a= Mathf.Lerp(tColor.a,0f, speed * Time.deltaTime);
