@@ -21,17 +21,17 @@ public class Fader : MonoBehaviour {
 		//if(Input.GetKeyDown(KeyCode.A)) FadeIn(1f);
 		//if(Input.GetKeyDown(KeyCode.S)) FadeOut(1f);
 		if( status == 1 ) {
-			if(image.color.a <= 0f) StopFade();
 			//tColor.a= Mathf.Lerp(tColor.a,0f, speed * Time.deltaTime);
 			tColor.a -= speed * Time.deltaTime;
 			image.color  = tColor;
+			if(image.color.a <= 0f) StopFade();
 		}
 
 		if( status == 2 ) {
-			if(image.color.a >= maxAlpha) StopFade();
 			//tColor.a = Mathf.Lerp(tColor.a,maxAlpha, speed * Time.deltaTime);
 			tColor.a += speed * Time.deltaTime;
 			image.color  = tColor;
+			if(image.color.a >= maxAlpha) StopFade();
 		}
 	}
 

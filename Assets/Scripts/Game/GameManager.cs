@@ -36,6 +36,6 @@ public class GameManager : MonoBehaviour {
 			if( (i+1) != playersAmount )
 				canvases[i].SetActive(false);
 		}
-
+		GameObject.Find("CanvasFader").GetComponent<Fader>().FadeIn(1f);
 	}
 }

@@ -7,6 +7,7 @@ public class LoadLevel : MonoBehaviour {
 
 	public GameObject tilePrefab;
 	public GameObject[] objectsPrefab;
+	public GameObject[] storyObjectsPrefab;
 	public Material material;
 	public Material breakable;
 
@@ -65,8 +66,13 @@ public class LoadLevel : MonoBehaviour {
 
 				// AQUI HARIAMOS LA DIFERENCIACION ENTRE TILES DIFERENTES
 				int value = int.Parse(""+tile.Attribute("category").Value);
-				if(value>= 300){
-					
+				if(value>= 300){ // DEBUG XA TELEPORTS
+					GameObject cube = Instantiate(storyObjectsPrefab[value-300],tempPos + new Vector3(x, 0, y), Quaternion.Euler(new Vector3(90f,0f,0f))) as GameObject;
+					cube.transform.position += new Vector3(.5f,.5f,.5f);
+					cube.transform.parent = gameObject.transform;
+					cube.name ="Object"+x+"_"+y;
+					cube.GetComponent<DoorTranslator>().destLevel = new Vector2(int.Parse(""+tile.Attribute("destx").Value),int.Parse(""+tile.Attribute("desty").Value));
+					cube.SendMessage("SetID",value,SendMessageOptions.DontRequireReceiver);
 				}
 				else if (value>= 200){
 					GameObject cube = Instantiate(objectsPrefab[value-200],tempPos + new Vector3(x, 0, y), Quaternion.Euler(new Vector3(90f,0f,0f))) as GameObject;

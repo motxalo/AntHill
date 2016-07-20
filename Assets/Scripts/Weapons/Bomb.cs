@@ -80,7 +80,10 @@ public class Bomb : MonoBehaviour {
 				_b.playerId = playerId;
 			}
 		if(tile >= 100 ){
-			GameObject.Find("Player"+(tile-100)).SendMessage("Die",playerId);
+			Debug.Log("PLAYER HIT :"+(tile-100));
+			GameObject tplayer = GameObject.Find("Player"+(tile-100));
+			if (tplayer!=null)
+				tplayer.SendMessage("Die",playerId);
 			tile = 0;
 		}
 		if(tile == 2){
