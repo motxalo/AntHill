@@ -57,10 +57,10 @@ public class CharSelectMenu : MonoBehaviour {
 	public Vector2 playerDisplacement = new Vector2(50f, 50f);
 
 	void Organize(){
-		Vector3 startPosition = players[0].rectTransform.position;
+		Vector3 startPosition = players[0].rectTransform.localPosition;
 		for ( int i=0; i< players.Length; i++){
 			Vector3 tDisp = new Vector3(playerDisplacement.x * (i % lineAmount), -1f * playerDisplacement.y * (i / lineAmount ),0);
-			players[i].rectTransform.position = startPosition + tDisp ;
+			players[i].rectTransform.localPosition = startPosition + tDisp ;
 		}
 		maxLines = players.Length;
 
