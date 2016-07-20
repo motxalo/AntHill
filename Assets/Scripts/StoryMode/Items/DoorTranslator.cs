@@ -5,7 +5,7 @@ public class DoorTranslator : MonoBehaviour {
 	public Vector2 destLevel = Vector2.zero;
 	public int	 destSpawn = 0;
 	Transform destiny;
-	private int players;
+	public int players;
 	// Use this for initialization
 	void Start	 () {
 		players = PlayerPrefs.GetInt("Players");
@@ -17,6 +17,7 @@ public class DoorTranslator : MonoBehaviour {
 	}
 
 	public void PlayerEnter(PlayerController _player){
+		if(_player.Forced()) return;
 		players--;
 		if (players == 0){
 			StartCoroutine(NextLevel());

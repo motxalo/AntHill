@@ -271,6 +271,10 @@ public class PlayerController : MonoBehaviour {
 
 	private Vector3 forcePos = Vector3.zero;
 
+	public bool Forced(){
+		return forcePos!=Vector3.zero;
+	}
+
 	public void ForceMove( Vector3 _pos){
 		forcePos = _pos;
 		forcePos.y = transform.position.y;
