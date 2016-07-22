@@ -3,7 +3,7 @@
   <tile category="0" posx="0" posy="0" />
   <tile category="0" posx="0" posy="1" />
   <tile category="0" posx="0" posy="2" />
-  <tile category="0" posx="0" posy="3" />
+  <tile category="300" posx="0" posy="3" destx = "0" desty = "1"/>
   <tile category="0" posx="0" posy="4" />
   <tile category="0" posx="0" posy="5" />
   <tile category="0" posx="0" posy="6" />
@@ -406,7 +406,7 @@
   <tile category="0" posx="8" posy="3" />
   <tile category="0" posx="8" posy="4" />
   <tile category="0" posx="8" posy="5" />
-  <tile category="300" posx="8" posy="6" destx = "0" desty = "2"/>
+  <tile category="0" posx="8" posy="6" />
   <tile category="0" posx="8" posy="7" />
   <tile category="0" posx="8" posy="8" />
   <tile category="0" posx="8" posy="9" />
@@ -513,7 +513,7 @@
   <tile category="0" posx="10" posy="10" />
   <tile category="0" posx="10" posy="11" />
   <tile category="0" posx="10" posy="12" />
-  <tile category="0" posx="10" posy="13" />
+  <tile category="300" posx="10" posy="13" destx = "0" desty = "3"/>
   <tile category="0" posx="10" posy="14" />
   <tile category="0" posx="10" posy="15" />
   <tile category="0" posx="10" posy="16" />
@@ -850,18 +850,18 @@
   <tile category="0" posx="16" posy="47" />
   <tile category="0" posx="16" posy="48" />
   <tile category="0" posx="16" posy="49" />
-  <tile category="0" posx="17" posy="0" />
-  <tile category="0" posx="17" posy="1" />
-  <tile category="0" posx="17" posy="2" />
-  <tile category="0" posx="17" posy="3" />
-  <tile category="0" posx="17" posy="4" />
-  <tile category="0" posx="17" posy="5" />
-  <tile category="0" posx="17" posy="6" />
-  <tile category="0" posx="17" posy="7" />
-  <tile category="0" posx="17" posy="8" />
-  <tile category="0" posx="17" posy="9" />
-  <tile category="0" posx="17" posy="10" />
-  <tile category="0" posx="17" posy="11" />
+  <tile category="300" posx="17" posy="0" destx = "0" desty = "4"/>
+  <tile category="200" posx="17" posy="1" />
+  <tile category="200" posx="17" posy="2" />
+  <tile category="200" posx="17" posy="3" />
+  <tile category="200" posx="17" posy="4" />
+  <tile category="200" posx="17" posy="5" />
+  <tile category="200" posx="17" posy="6" />
+  <tile category="200" posx="17" posy="7" />
+  <tile category="200" posx="17" posy="8" />
+  <tile category="200" posx="17" posy="9" />
+  <tile category="200" posx="17" posy="10" />
+  <tile category="200" posx="17" posy="11" />
   <tile category="0" posx="17" posy="12" />
   <tile category="0" posx="17" posy="13" />
   <tile category="0" posx="17" posy="14" />

@@ -26,6 +26,7 @@ public class mouseMovement : MonoBehaviour {
                         hit.transform.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", selectedTileTexture);
                         // RELLENO LA LISTA DE TILES
                         string[] cellname = hit.transform.name.Split('_');
+						Debug.Log("SELECTED CELL : "+cellname);
                         LevelEditorManager.SetTile(int.Parse(cellname[1]), int.Parse(cellname[2]), selectedTileId);
                     }
                 }
@@ -42,7 +43,8 @@ public class mouseMovement : MonoBehaviour {
                         if (selectedTileId < 0) return;
                         hit.transform.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", selectedTileTexture);
                         // RELLENO LA LISTA DE TILES
-                        string[] cellname = hit.transform.name.Split('_');
+						string[] cellname = hit.transform.name.Split('_');
+						Debug.Log("SELECTED CELL : "+cellname);
                         LevelEditorManager.SetTile(int.Parse(cellname[1]), int.Parse(cellname[2]), selectedTileId);
                     }
                     else if (hit.transform.tag == "botonEditor")

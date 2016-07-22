@@ -84,6 +84,7 @@ public class LoadLevel : MonoBehaviour {
 
 			}
 		}
+		return;
 		// Debug para el borde
 		for(int i = 0; i<size;i++){
 			GameObject cube = Instantiate(tilePrefab,tempPos + new Vector3(0, 0, i), Quaternion.identity) as GameObject;
