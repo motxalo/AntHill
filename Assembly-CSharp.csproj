@@ -95,17 +95,23 @@
      <None Include="Assets\Resources\Maps\Story_0_0\objetos.xml" />
      <None Include="Assets\Resources\Maps\Story_0_0\mapa.xml" />
      <None Include="Assets\Resources\Maps\verdades\mapa.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_3\mapa.xml" />
      <None Include="Assets\Resources\Maps\Story_0_1\mapa.xml" />
      <None Include="Assets\Resources\Maps\cabeza\mapa.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_2\objetos.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_3\objetos.xml" />
      <None Include="Assets\Resources\EditorMaps\objetos.xml" />
      <None Include="Assets\Resources\Maps\tanks\objetos.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba2\mapa.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_4\objetos.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba\objetos.xml" />
      <None Include="Assets\Resources\Maps\verdades\objetos.xml" />
      <None Include="Assets\Resources\Maps\Story_0_1\objetos.xml" />
      <None Include="Assets\Resources\Maps\football\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba\mapa.xml" />
      <None Include="Assets\Resources\Maps\tanks\mapa.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_4\mapa.xml" />
+     <None Include="Assets\Resources\Maps\Story_0_2\mapa.xml" />
      <None Include="Assets\Resources\Maps\mapaPrueba2\objetos.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
