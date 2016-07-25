@@ -23,6 +23,7 @@ public class mouseMovement : MonoBehaviour {
         int rayDistance = 20;
         Debug.DrawRay(transform.position, Vector3.forward * rayDistance);
 
+<<<<<<< HEAD
 		if (pathMode) {
 			if (Physics.Raycast (touchRay, out hit, rayDistance)) {
 				if (hit.transform.tag == "planosEditor") {
@@ -80,6 +81,49 @@ public class mouseMovement : MonoBehaviour {
 				}
 			}
 		}
+=======
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetMouseButton(0)) {
+                if (Physics.Raycast(touchRay, out hit, rayDistance)) {
+                    if (hit.transform.tag == "planosEditor") {
+                        if (selectedTileId < 0) return;
+                        hit.transform.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", selectedTileTexture);
+                        // RELLENO LA LISTA DE TILES
+                        string[] cellname = hit.transform.name.Split('_');
+						Debug.Log("SELECTED CELL : "+cellname);
+                        LevelEditorManager.SetTile(int.Parse(cellname[1]), int.Parse(cellname[2]), selectedTileId);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (Physics.Raycast(touchRay, out hit, rayDistance))
+                {
+                    if (hit.transform.tag == "planosEditor")
+                    {
+                        if (selectedTileId < 0) return;
+                        hit.transform.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", selectedTileTexture);
+                        // RELLENO LA LISTA DE TILES
+						string[] cellname = hit.transform.name.Split('_');
+						Debug.Log("SELECTED CELL : "+cellname);
+                        LevelEditorManager.SetTile(int.Parse(cellname[1]), int.Parse(cellname[2]), selectedTileId);
+                    }
+                    else if (hit.transform.tag == "botonEditor")
+                    {
+                        hit.transform.GetComponent<LevelEditorButton>().DoClicked();
+                    }
+                    else if (hit.transform.tag == "tabEditor")
+                    {
+                        hit.transform.GetComponent<LevelEditorTab>().DoClicked();
+                    }
+                }
+            }
+        }
+>>>>>>> origin/master
 		posMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		transform.position = new Vector3(posMouse.x,posMouse.y,transform.position.z);
 	}

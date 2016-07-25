@@ -406,7 +406,7 @@
   <tile category="0" posx="8" posy="3" />
   <tile category="0" posx="8" posy="4" />
   <tile category="0" posx="8" posy="5" />
-  <tile category="300" posx="8" posy="6" destx = "0" desty = "0"/>
+  <tile category="300" posx="8" posy="6" destx = "0" desty = "2"/>
   <tile category="0" posx="8" posy="7" />
   <tile category="0" posx="8" posy="8" />
   <tile category="0" posx="8" posy="9" />

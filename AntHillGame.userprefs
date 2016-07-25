@@ -1,20 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menus/Fader.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Maps/Story_0_4/objetos.xml">
     <Files>
-      <File FileName="Assets/Scripts/Game/GameManager.cs" Line="7" Column="31" />
-      <File FileName="Assets/Scripts/Level/LoadLevel.cs" Line="71" Column="10" />
-      <File FileName="Assets/Scripts/Items/Coin.cs" Line="15" Column="3" />
-      <File FileName="Assets/Scripts/StoryMode/Items/DoorTranslator.cs" Line="4" Column="46" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="59" Column="32" />
-      <File FileName="Assets/Scripts/Menus/GameTypeMenu.cs" Line="30" Column="48" />
-      <File FileName="Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="84" Column="30" />
-      <File FileName="Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="23" Column="24" />
-      <File FileName="Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="27" Column="32" />
-      <File FileName="Assets/Resources/EditorMaps/mapa.xml" Line="33" Column="39" />
-      <File FileName="Assets/Scripts/Menus/CharSelectCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menus/Fader.cs" Line="22" Column="5" />
-      <File FileName="Assets/Scripts/Menus/CharSelectMenu.cs" Line="53" Column="7" />
+      <File FileName="Assets/Resources/Maps/Story_0_2/objetos.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Level/LoadLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Maps/Story_0_3/objetos.xml" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Maps/Story_0_4/objetos.xml" Line="360" Column="64" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
