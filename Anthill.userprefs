@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../AntHill/Assets/Scripts/LevelEditor/mouseMovement.cs">
     <Files>
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="32" Column="5" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="12" Column="10" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="21" Column="3" />
-      <File FileName="../AntHill/Assets/Scripts/LevelEditor/mouseMovement.cs" Line="14" Column="18" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorManager.cs" Line="75" Column="53" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorGenerator.cs" Line="1" Column="1" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/LevelEditorButton.cs" Line="13" Column="1" />
+      <File FileName="../AntHill/Assets/Scripts/LevelEditor/mouseMovement.cs" Line="34" Column="76" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
