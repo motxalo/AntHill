@@ -58,6 +58,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -65,9 +71,12 @@
   <ItemGroup>
     <Compile Include="Assets\Fx Explosion Pack\Script\DestroyEffect.cs" />
     <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyPatrol.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\GameModes\CaptureTheFlag.cs" />
     <Compile Include="Assets\Scripts\Game\GameModes\Deathmatch.cs" />
+    <Compile Include="Assets\Scripts\Game\GameModes\StoryMode.cs" />
+    <Compile Include="Assets\Scripts\Game\StatManager.cs" />
     <Compile Include="Assets\Scripts\Items\Coin.cs" />
     <Compile Include="Assets\Scripts\Items\Flag.cs" />
     <Compile Include="Assets\Scripts\Level\LoadLevel.cs" />
@@ -80,18 +89,42 @@
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTab.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\LevelEditorTabsManager.cs" />
     <Compile Include="Assets\Scripts\LevelEditor\mouseMovement.cs" />
+    <Compile Include="Assets\Scripts\Menus\CharSelectCanvas.cs" />
+    <Compile Include="Assets\Scripts\Menus\CharSelectMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\CharSelectorIdent.cs" />
+    <Compile Include="Assets\Scripts\Menus\Fader.cs" />
     <Compile Include="Assets\Scripts\Menus\GameModeMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\GameTypeMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\LevelSelectMenu.cs" />
+    <Compile Include="Assets\Scripts\Player\Characters\CharBerzerk.cs" />
+    <Compile Include="Assets\Scripts\Player\Characters\CharDefensa.cs" />
+    <Compile Include="Assets\Scripts\Player\Characters\CharExcavadora.cs" />
+    <Compile Include="Assets\Scripts\Player\Characters\CharObrera.cs" />
+    <Compile Include="Assets\Scripts\Player\Characters\CharStandar.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\StoryMode\Items\DoorTranslator.cs" />
+    <Compile Include="Assets\Scripts\StoryMode\OLD\Game\StoryGamePreo.cs" />
+    <Compile Include="Assets\Scripts\StoryMode\OLD\Map\MapSegment.cs" />
+    <Compile Include="Assets\Scripts\StoryMode\OLD\Map\SegmentManager.cs" />
     <Compile Include="Assets\Scripts\Weapons\Bomb.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Mina.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Levels\XML\levelManager.xml" />
     <None Include="Assets\Resources\EditorMaps\mapa.xml" />
     <None Include="Assets\Resources\EditorMaps\objetos.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_0\mapa.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_0\objetos.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_1\mapa.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_1\objetos.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_2\mapa.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_2\objetos.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_3\mapa.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_3\objetos.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_4\mapa.xml" />
+    <None Include="Assets\Resources\Maps\Story_0_4\objetos.xml" />
     <None Include="Assets\Resources\Maps\cabeza\mapa.xml" />
     <None Include="Assets\Resources\Maps\cabeza\objetos.xml" />
     <None Include="Assets\Resources\Maps\football\mapa.xml" />
